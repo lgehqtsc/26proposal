@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LG전자 교육서비스 제안서 2026</title>
+<title>2026 교육서비스센터 제안서</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -436,11 +436,11 @@
   .legend-item { display: flex; align-items: center; gap: 5px; }
   .legend-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
 
-  .radar-container { display: flex; gap: 40px; align-items: center; }
+  .radar-container { display: flex; gap: 40px; align-items: center; justify-content: center; }
   .radar-chart-area { width: 480px; flex-shrink: 0; }
-  .radar-text-area { max-width: 500px; }
-  .radar-text-area .rt-title { color: #b22222; font-weight: bold; font-size: 14px; margin-top: 12px; }
-  .radar-text-area .rt-sub { color: #777; font-size: 13.5px; margin-top: 4px; margin-bottom: 4px; }
+  .radar-text-area { max-width: 500px; display: flex; flex-direction: column; justify-content: center; }
+  .radar-text-area .rt-title { color: #b22222; font-weight: bold; font-size: 14px; margin-top: 12px; text-align: none; }
+  .radar-text-area .rt-sub { color: #777; font-size: 13.5px; margin-top: 4px; margin-bottom: 4px; text-align: none; }
 
   .image-modal {
     display: none; position: fixed; inset: 0; z-index: 9999;
@@ -619,7 +619,7 @@
     <div class="lg-logo">LG</div>
     <div class="header-title">
       LG전자 교육서비스 제안서
-      <span>2025–2026 Proposal</span>
+      <span>2026 Proposal</span>
     </div>
   </div>
   <div class="header-badge">Confidential</div>
@@ -628,10 +628,10 @@
 <!-- TAB BAR -->
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showTab(0)">교육 서비스 구성</button>
-  <button class="tab-btn" onclick="showTab(1)">'25년 교육/영상서비스 현황</button>
-  <button class="tab-btn" onclick="showTab(2)">'26년 교육서비스 계획</button>
-  <button class="tab-btn" onclick="showTab(3)">'26년 영상서비스</button>
-  <button class="tab-btn" onclick="showTab(4)">'26년 비용제안</button>
+  <button class="tab-btn" onclick="showTab(1)">교육/영상서비스 현황</button>
+  <button class="tab-btn" onclick="showTab(2)">교육서비스 계획</button>
+  <button class="tab-btn" onclick="showTab(3)">영상서비스</button>
+  <button class="tab-btn" onclick="showTab(4)">비용제안</button>
   <button class="tab-btn" onclick="showTab(5)">교육서비스센터 인원구성</button>
   <button class="tab-btn" onclick="showTab(6)">[첨부] LG 계열사별 교육운영 인력 산정 기준</button>
 </div>
@@ -641,9 +641,9 @@
 ════════════════════════════════════════ -->
 <div class="tab-content active" id="tab-0">
   <div class="hero">
-    <div class="hero-label">Education Service</div>
+    <div class="hero-label">Education Service Composition</div>
     <h1>교육 서비스 구성</h1>
-    <p>LG전자 교육서비스의 핵심 운영 역량과 전체 서비스 범위(SOW)를 안내합니다.</p>
+    <p>LG전자 교육서비스의 주요 운영 내용과 서비스 범위(SOW)를 안내드립니다.</p>
   </div>
 
   <!-- ── 교육 운영 서비스 구성 ── -->
@@ -963,9 +963,9 @@
 ════════════════════════════════════════ -->
 <div class="tab-content" id="tab-1">
   <div class="hero">
-    <div class="hero-label">2025 Education Service</div>
-    <h1>'25년 교육서비스 현황</h1>
-    <p>2025년 한 해 동안 운영된 LG전자 교육서비스의 성과와 운영 현황을 종합적으로 정리합니다.</p>
+    <div class="hero-label">Education Service</div>
+    <h1>교육서비스 현황</h1>
+    <p>2025년 한 해 동안 운영된 LG전자 교육서비스의 운영 현황을 종합적으로 정리합니다.</p>
   </div>
 
   <div class="section">
@@ -1165,8 +1165,8 @@
 <div class="tab-content" id="tab-2">
   <div class="hero">
     <div class="hero-label">2026 Education Plan</div>
-    <h1>'26년 교육서비스 계획</h1>
-    <p>2025년 성과를 기반으로 더욱 고도화된 교육 경험을 설계합니다. AI 기반 맞춤 학습과 글로벌 역량 강화를 중심으로 추진합니다.</p>
+    <h1>교육서비스 계획</h1>
+    <p>AI 기반 맞춤 학습 운영을 통해 안정적인 학습 환경을 제공하며 학습자의 성장 경험을 지속적으로 지원합니다..</p>
   </div>
 
   <div class="section">
@@ -1187,13 +1187,25 @@
         반복 문의 사항을 자동화하여 <b>교육 담당자의 운영 업무 부담 감소 및 업무 효율성 증대</b><br>
         사용자 중심 UX 개선으로 <b>교육 참여 편의성 및 교육 서비스 만족도 향상</b></p>
       </div>
-      <div class="card">
-        <div class="card-icon">✅</div>
-        <h3>교육운영 프로세스 표준화 및 과정별 체크리스트 체계 구축</h3>
-        <p>교육 운영 단계별 표준 프로세스 정립을 통해 <b>운영 품질의 일관성 확보</b><br>
-        과정별 체크리스트 활용으로 <b>교육 준비·운영 과정에서의 누락 및 오류 최소화</b><br>
-        담당자 변경 시에도 동일한 기준으로 운영 가능하여 <b>교육 운영 안정성과 지속 가능성 강화</b></p>
-      </div>
+      <div class="card" style="position: relative;">
+  <button
+    onclick="openResource('checklist_Evidence.png', 'image')"
+    style="position:absolute; top:16px; right:16px;
+           font-family:'Noto Sans KR',sans-serif; font-size:12px; font-weight:700;
+           color:var(--lg-red); background:rgba(165,0,52,.07);
+           border:1.5px solid var(--lg-red); border-radius:8px;
+           padding:5px 11px; cursor:pointer;
+           transition:background .2s, color .2s;"
+    onmouseover="this.style.background='var(--lg-red)';this.style.color='#fff';"
+    onmouseout="this.style.background='rgba(165,0,52,.07)';this.style.color='var(--lg-red)';">
+    📋 체크리스트 예시
+  </button>
+  <div class="card-icon">✅</div>
+  <h3>교육운영 프로세스 표준화 및 과정별 체크리스트 체계 구축</h3>
+  <p>교육 운영 단계별 표준 프로세스 정립을 통해 <b>운영 품질의 일관성 확보</b><br>
+  과정별 체크리스트 활용으로 <b>교육 준비·운영 과정에서의 누락 및 오류 최소화</b><br>
+  담당자 변경 시에도 동일한 기준으로 운영 가능하여 <b>교육 운영 안정성과 지속 가능성 강화</b></p>
+</div>
     </div>
   </div>
 
@@ -1231,11 +1243,11 @@
       <h3 style="font-size: 15px; color: var(--lg-dark);">3. 본부별 교육 운영 공수</h3>
       <div style="display:flex; align-items:center; gap:16px;">
         <span style="font-size: 13.5px; color:#777;">(단위: 시간)</span>
-        <button onclick="window.open('여기에_깃허브_이미지_URL_입력', '_blank')"
+        <button onclick="openResource('Timecheck_Evidence.png', 'image')"
           style="font-family:'Noto Sans KR',sans-serif; font-size: 13.5px; font-weight:700; color:var(--lg-red); background:rgba(165,0,52,.07); border:1.5px solid var(--lg-red); border-radius:8px; padding:6px 14px; cursor:pointer; transition:background .2s, color .2s;"
           onmouseover="this.style.background='var(--lg-red)';this.style.color='#fff';"
           onmouseout="this.style.background='rgba(165,0,52,.07)';this.style.color='var(--lg-red)';">
-          📋 공수산정방식
+          📋 공수산정 방식
         </button>
       </div>
     </div>
@@ -1538,7 +1550,7 @@
 <div class="tab-content" id="tab-3">
   <div class="hero">
     <div class="hero-label">2026 Video Service</div>
-    <h1>'26년 영상서비스</h1>
+    <h1>영상 서비스 계획</h1>
     <p>기존 M/M 방식을 유지하면서 Pooling of Resources 방식을 도입, 업무 효율성과 제작 품질을 동시에 향상시킵니다.</p>
   </div>
 
@@ -1875,142 +1887,54 @@
           <tbody>
             <!-- 기획 -->
             <tr>
-              <td class="e-badge" rowspan="27" style="vertical-align:middle;">E</td>
+              <td class="e-badge" rowspan="26" style="vertical-align:middle;">E</td>
               <td class="cat-cell" rowspan="3" style="vertical-align:middle;">기획</td>
-              <td>전면 재 기획</td>
-              <td>2</td>
-              <td>기획 콘셉트 변경</td>
+              <td>전면 재 기획</td><td>2</td><td>기획 콘셉트 변경</td>
             </tr>
-            <tr>
-              <td>기획 수정</td>
-              <td>1</td>
-              <td>기획 방향 확정 후 구조 변경</td>
-            </tr>
-            <tr>
-              <td>추가 회의</td>
-              <td>0.5</td>
-              <td>2시간 초과 회의</td>
-            </tr>
+            <tr><td>기획 수정</td><td>1</td><td>기획 방향 확정 후 구조 변경</td></tr>
+            <tr><td>추가 회의</td><td>0.5</td><td>2시간 초과 회의</td></tr>
             <!-- 촬영 -->
             <tr>
-              <td class="cat-cell" rowspan="5" style="vertical-align:middle;">촬영</td>
-              <td>추가 카메라</td>
-              <td>1</td>
-              <td>카메라 1대 당</td>
+              <td class="cat-cell" rowspan="4" style="vertical-align:middle;">촬영</td>
+              <td>추가 카메라</td><td>1</td><td>카메라 1대 당</td>
             </tr>
-            <tr>
-              <td>사진 촬영</td>
-              <td>1</td>
-              <td>사진 촬영 진행 (4H 이내)</td>
-            </tr>
-            <tr>
-              <td>특수 장비</td>
-              <td>1</td>
-              <td>지미집, 드론, 로닌 등</td>
-            </tr>
-            <tr>
-              <td>추가 촬영 일</td>
-              <td>3</td>
-              <td>반일 이상 (4H)</td>
-            </tr>
+            <tr><td>사진 촬영</td><td>1</td><td>사진 촬영 진행 (4H 이내)</td></tr>
+            <tr><td>특수 장비</td><td>1</td><td>지미집, 드론, 로닌 등</td></tr>
+            <tr><td>추가 촬영 일</td><td>3</td><td>반일 이상 (4H)</td></tr>
             <!-- 편집 -->
             <tr>
-              <td class="cat-cell" rowspan="7" style="vertical-align:middle;">편집</td>
-              <td>수정 3회차</td>
-              <td>1</td>
-              <td>1회 당</td>
+              <td class="cat-cell" rowspan="5" style="vertical-align:middle;">편집</td>
+              <td>수정 3회차</td><td>1</td><td>1회 당</td>
             </tr>
-            <tr>
-              <td>러닝 타임 추가</td>
-              <td>1</td>
-              <td>1분 이상 추가시 (분 당)</td>
-            </tr>
-            <tr>
-              <td>AI아바타</td>
-              <td>1</td>
-              <td>10초 이내</td>
-            </tr>
-            <tr>
-              <td>AI더빙</td>
-              <td>1</td>
-              <td>언어 추가</td>
-            </tr>
-            <tr>
-              <td>자막 전면 교체</td>
-              <td>1</td>
-              <td>전체 변경</td>
-            </tr>
+            <tr><td>러닝 타임 추가</td><td>1</td><td>1분 이상 추가시 (분 당)</td></tr>
+            <tr><td>AI아바타</td><td>1</td><td>10초 이내</td></tr>
+            <tr><td>AI더빙</td><td>1</td><td>언어 추가</td></tr>
+            <tr><td>자막 전면 교체</td><td>1</td><td>전체 변경</td></tr>
             <!-- 디자인 -->
             <tr>
               <td class="cat-cell" rowspan="6" style="vertical-align:middle;">디자인</td>
-              <td>썸네일 제작</td>
-              <td>1</td>
-              <td>컷 당</td>
+              <td>썸네일 제작</td><td>1</td><td>컷 당</td>
             </tr>
-            <tr>
-              <td>누끼</td>
-              <td>1</td>
-              <td>컷 당</td>
-            </tr>
-            <tr>
-              <td>사진 보정</td>
-              <td>0.5</td>
-              <td>단순 보정</td>
-            </tr>
-            <tr>
-              <td>폰트/컬러 변경</td>
-              <td>0.5</td>
-              <td>전체 수정</td>
-            </tr>
-            <tr>
-              <td>파일 변환</td>
-              <td>0.25</td>
-              <td>단순 변환</td>
-            </tr>
-            <tr>
-              <td>추가 모션</td>
-              <td>1</td>
-              <td>5초 이내</td>
-            </tr>
+            <tr><td>누끼</td><td>1</td><td>컷 당</td></tr>
+            <tr><td>사진 보정</td><td>0.5</td><td>단순 보정</td></tr>
+            <tr><td>폰트/컬러 변경</td><td>0.5</td><td>전체 수정</td></tr>
+            <tr><td>파일 변환</td><td>0.25</td><td>단순 변환</td></tr>
+            <tr><td>추가 모션</td><td>1</td><td>5초 이내</td></tr>
             <!-- 송출 -->
             <tr>
               <td class="cat-cell" rowspan="4" style="vertical-align:middle;">송출</td>
-              <td>외부 플랫폼 연동</td>
-              <td>1</td>
-              <td>유튜브+내부 동시</td>
+              <td>외부 플랫폼 연동</td><td>1</td><td>유튜브+내부 동시</td>
             </tr>
-            <tr>
-              <td>리허설</td>
-              <td>1</td>
-              <td>1회 당</td>
-            </tr>
-            <tr>
-              <td>긴급 셋팅</td>
-              <td>1</td>
-              <td>당일 요청 건</td>
-            </tr>
-            <tr>
-              <td>초과 시간</td>
-              <td>0.25</td>
-              <td>1시간 당</td>
-            </tr>
+            <tr><td>리허설</td><td>1</td><td>1회 당</td></tr>
+            <tr><td>긴급 셋팅</td><td>1</td><td>당일 요청 건</td></tr>
+            <tr><td>초과 시간</td><td>0.25</td><td>1시간 당</td></tr>
             <!-- 기타 -->
             <tr>
               <td class="cat-cell" rowspan="3" style="vertical-align:middle;">기타</td>
-              <td>스크롤 전환</td>
-              <td>1</td>
-              <td>스크롤 전환</td>
+              <td>스콤 전환</td><td>1</td><td>스콤 전환</td>
             </tr>
-            <tr>
-              <td>장비 셋팅</td>
-              <td>1</td>
-              <td>촬영 장비 셋팅 (추가)</td>
-            </tr>
-            <tr>
-              <td>채널 운영</td>
-              <td>0.5</td>
-              <td>채널 운영 및 업로드</td>
-            </tr>
+            <tr><td>장비 셋팅</td><td>1</td><td>촬영 장비 셋팅 (추가)</td></tr>
+            <tr><td>채널 운영</td><td>0.5</td><td>채널 운영 및 업로드</td></tr>
           </tbody>
         </table>
       </div>
@@ -2223,12 +2147,12 @@
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [미디어플레이트]<br>
-              <a href="NAVER_S_URL" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
+              <a href="https://mediaplate.co.kr/" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(S급 1,200만~1,500만)</span>
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [JLFilms]<br>
-              <a href="KMONG_S_URL" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
+              <a href="https://kmong.com/gig/416596" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(프리미엄 500만~900만)</span>
             </td>
             <td style="padding:24px 18px; border-right:none; vertical-align:middle; line-height:1.8;">
@@ -2249,12 +2173,12 @@
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [더나은인재들]<br>
-              <a href="NAVER_A_URL" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
+              <a href="http://www.betterpeople.kr/main" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(A급 280만~700만)</span>
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [가드미디어]<br>
-              <a href="KMONG_A_URL" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
+              <a href="https://kmong.com/gig/662520" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(60초 분량 140만)<br>(비즈니스 300만~550만)</span>
             </td>
             <td style="padding:24px 18px; border-right:none; vertical-align:middle; line-height:1.8;">
@@ -2275,12 +2199,12 @@
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [더나은인재들]<br>
-              <a href="NAVER_B_URL" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
+              <a href="http://www.betterpeople.kr/main" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(B급 150만~700만)</span>
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [조컴퍼니]<br>
-              <a href="KMONG_B_URL" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
+              <a href="https://kmong.com/gig/592186" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(촬영X 50만~100만)<br>(촬영 포함 120만~170만)</span>
             </td>
             <td style="padding:24px 18px; border-right:none; vertical-align:middle; line-height:1.8;">
@@ -2317,7 +2241,7 @@
     </div>
 
     <div style="margin-top:14px; font-size:12px; color:var(--lg-gray); padding-left:4px;">
-      ※ 네이버 B2B / 크몽 링크는 실제 URL 연결 후 사용하세요. 현재 플레이스홀더(NAVER_S_URL 등)로 설정되어 있습니다.
+   
     </div>
   </div>
 </div>
@@ -2347,7 +2271,7 @@
       <div class="cost-card">
         <div class="c-label">인상률 제안</div>
         <div class="c-value">3.5%</div>
-        <div class="c-change">단가 기준 적용</div>
+        <div class="c-change"></div>
       </div>
       <div class="cost-card">
         <div class="c-label">'26년 운영 인원</div>
@@ -2361,19 +2285,19 @@
 
     <div class="cost-table-wrap" style="overflow-x:auto;">
       <table class="cost-table" style="width:100%; min-width:900px;">
-        <colgroup>
+<colgroup>
           <col style="width:7%">  <!-- 대분류 -->
           <col style="width:7%">  <!-- 항목 -->
           <col style="width:5%">  <!-- 직급 -->
-          <col style="width:4%">  <!-- 25 인원수 -->
+          <col style="width:5%">  <!-- 25 인원수 -->
           <col style="width:4%">  <!-- 25 개월 -->
-          <col style="width:5%">  <!-- 25 단가 -->
-          <col style="width:8%">  <!-- 25 금액 -->
+          <col style="width:6%">  <!-- 25 단가 -->
+          <col style="width:9%">  <!-- 25 금액 -->
           <col style="width:5%">  <!-- 26 직급 -->
-          <col style="width:4%">  <!-- 26 인원수 -->
+          <col style="width:5%">  <!-- 26 인원수 -->
           <col style="width:4%">  <!-- 26 개월 -->
-          <col style="width:5%">  <!-- 26 단가 -->
-          <col style="width:8%">  <!-- 26 금액 -->
+          <col style="width:6%">  <!-- 26 단가 -->
+          <col style="width:9%">  <!-- 26 금액 -->
           <col style="width:10%"> <!-- 인상률 -->
         </colgroup>
         <thead>
@@ -2381,7 +2305,7 @@
             <th rowspan="2" colspan="2" style="text-align:center;">구분</th>
             <th colspan="5">'25년 단가</th>
             <th colspan="5" class="th-red">'26년 단가</th>
-            <th rowspan="2">인상률</th>
+            <th rowspan="2" class="th-red">인상률</th>
           </tr>
           <tr>
             <th class="th-sub">직급</th>
@@ -2397,7 +2321,7 @@
             <td class="td-sub">매니저</td>
             <td>팀장</td><td>1</td><td>12</td><td>8,876</td><td>106,512</td>
             <td>팀장</td><td>1</td><td>12</td><td>9,187</td><td>110,240</td>
-            <td rowspan="5" style="vertical-align:middle; text-align:center;"><span class="cost-badge">3.5%</span></td>
+         <td rowspan="4" style="vertical-align:middle; text-align:center;"><span class="cost-badge">3.5%</span></td>
           </tr>
           <!-- 교육운영 -->
           <tr>
@@ -2429,11 +2353,14 @@
             <td rowspan="2" style="text-align:center; vertical-align:middle;">12</td>
             <td rowspan="2" style="text-align:center; vertical-align:middle;">5,877</td>
             <td rowspan="2" style="text-align:center; vertical-align:middle;">669,978</td>
-            <td rowspan="2" style="vertical-align:middle; text-align:center; font-size: 13.5px; color:#555; line-height:1.5;">'25년 사원/선임<br>단가 통합</td>
+  
           </tr>
           <!-- 영상제작 사원 -->
           <tr>
             <td>사원</td><td>10</td><td>12</td><td>5,484</td><td>625,176</td>
+            <td rowspan="1" style="vertical-align:middle; text-align:center; font-size:12px; color:#555; line-height:1.5; background:#fff8f8;">
+              '25년 사원/선임<br>단가 통합
+            </td>
           </tr>
           <!-- ① 소계 -->
           <tr>
@@ -2481,7 +2408,7 @@
             <td class="td-total" style="font-weight:700;">53,361</td>
             <td class="td-total"></td><td class="td-total"></td><td class="td-total"></td><td class="td-total"></td>
             <td class="td-total" style="font-weight:700;">34,395</td>
-            <td class="td-total"></td>
+
             <td class="td-total"></td>
           </tr>
           <!-- 총액 -->
@@ -2809,20 +2736,7 @@
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Staffing Plan</div>
-    <div class="section-heading">분기별 투입 계획</div>
-    <table class="lg-table">
-      <thead><tr><th>역할</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>비고</th></tr></thead>
-      <tbody>
-        <tr><td>프로젝트 매니저</td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-red">100%</span></td><td>상시 전담</td></tr>
-        <tr><td>교육설계자</td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-gray">50%</span></td><td><span class="badge badge-gray">50%</span></td><td>상반기 집중</td></tr>
-        <tr><td>영상 프로듀서</td><td><span class="badge badge-gray">50%</span></td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-gray">50%</span></td><td>제작 시즌 집중</td></tr>
-        <tr><td>플랫폼 개발자</td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-gray">50%</span></td><td><span class="badge badge-gray">30%</span></td><td>초기 구축 집중</td></tr>
-        <tr><td>CS 매니저</td><td><span class="badge badge-gray">30%</span></td><td><span class="badge badge-gray">50%</span></td><td><span class="badge badge-red">100%</span></td><td><span class="badge badge-red">100%</span></td><td>하반기 운영 집중</td></tr>
-      </tbody>
-    </table>
-  </div>
+    </div>
 </div>
 
 <!-- ═══════════════════════════════════════
@@ -2965,8 +2879,8 @@
 function showTab(index) {
   document.querySelectorAll('.tab-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
   document.querySelectorAll('.tab-content').forEach((content, i) => content.classList.toggle('active', i === index));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
 function openResource(url, type) {
   if (!url || url.startsWith('YOUR_')) { alert('여기에 실제 URL 또는 이미지 경로를 연결해주세요.'); return; }
   if (type === 'image') {
