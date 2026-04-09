@@ -260,24 +260,6 @@
   .price-btn:hover, .price-card.featured .price-btn { background: var(--lg-red); color: white; }
 
   /* ── TEAM / ORG ── */
-  .org-chart { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 32px 0; }
-  .org-node {
-    background: var(--lg-white); border: 2px solid var(--lg-red);
-    border-radius: 12px; padding: 12px 24px; text-align: center;
-    min-width: 160px; width: 200px;
-    box-shadow: 0 2px 12px rgba(165,0,52,.12);
-  }
-  .org-node.top { background: var(--lg-dark); border-color: var(--lg-dark); margin: 0 auto; }
-  .org-node.top .org-name { color: white; }
-  .org-node.top .org-title { color: rgba(255,255,255,.5); }
-  .org-name { font-size: 14px; font-weight: 700; color: var(--lg-dark); }
-  .org-title { font-size: 11px; color: var(--lg-muted); margin-top: 2px; }
-  .org-line { width: 2px; height: 28px; background: var(--lg-silver); }
-  .org-row { display: flex; gap: 24px; position: relative; }
-  .org-col { display: flex; flex-direction: column; align-items: center; gap: 0; }
-  .org-col-line { width: 2px; height: 28px; background: var(--lg-silver); }
-
-  .org-row-top { display: flex; gap: 24px; justify-content: center; position: relative; }
   .org-sub-wrap {
     margin-top: 24px; display: grid;
     grid-template-columns: repeat(4, 1fr); gap: 14px; width: 100%;
@@ -304,7 +286,7 @@
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 
   /* ── PERFORMANCE CARDS ── */
-.performance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .performance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
   .performance-card {
     background: var(--lg-white); border-radius: 14px; padding: 24px;
     box-shadow: 0 2px 12px rgba(0,0,0,.06);
@@ -316,7 +298,7 @@
   .performance-title { font-size: 15px; font-weight: 700; color: var(--lg-dark); margin-bottom: 10px; }
   .performance-desc { font-size: 13px; color: var(--lg-gray); line-height: 1.7; }
 
-  /* ── COST SECTION (비용제안 탭 내부) ── */
+  /* ── COST SECTION ── */
   .cost-section { padding: 40px 64px; }
   .cost-section-alt { background: var(--lg-white); }
 
@@ -341,13 +323,12 @@
   }
   .cost-section-desc { font-size: 12px; color: #666; margin-bottom: 16px; padding-left: 18px; }
 
-.cost-table-wrap {
-  background: var(--lg-white); border-radius: 12px;
-  border: 1px solid var(--lg-silver); overflow: hidden; margin-bottom: 32px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.05);
-  width: 100%;
-  max-width: 100%;
-}
+  .cost-table-wrap {
+    background: var(--lg-white); border-radius: 12px;
+    border: 1px solid var(--lg-silver); overflow: hidden; margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    width: 100%; max-width: 100%;
+  }
   .cost-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
   .cost-table th {
     background: var(--lg-dark); color: #fff;
@@ -374,7 +355,7 @@
   .cost-table tr:hover td:not(.td-grand):not(.td-grand2):not(.td-total-row) { background: #fdf4f6; }
   .cost-badge { display: inline-block; background: #ffe0e8; color: var(--lg-red); border-radius: 4px; font-size: 10px; padding: 1px 7px; font-weight: 700; }
 
-  /* ── WORKFORCE TABLE (인원산정) ── */
+  /* ── WORKFORCE TABLE ── */
   .wf-box {
     background: var(--lg-white); padding: 18px 22px; margin-bottom: 20px;
     border-left: 5px solid var(--lg-red);
@@ -394,6 +375,157 @@
     box-shadow: 0 3px 10px rgba(0,0,0,.05); font-size: 13px; line-height: 1.7; margin-bottom: 18px;
     border-radius: 0 8px 8px 0;
   }
+
+  /* ── SITE WORKFORCE TABLES ── */
+  .site-tables-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 8px;
+  }
+
+  .site-table-block {
+    background: var(--lg-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 16px rgba(0,0,0,.07);
+    border: 1px solid var(--lg-silver);
+  }
+
+  .site-table-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 24px 16px;
+    border-bottom: 2px solid var(--lg-silver);
+    background: linear-gradient(90deg, rgba(165,0,52,.04) 0%, transparent 100%);
+  }
+
+  .site-table-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: var(--lg-red);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(165,0,52,.3);
+  }
+
+  .site-table-meta { flex: 1; }
+  .site-table-name {
+    font-size: 16px; font-weight: 800; color: var(--lg-dark);
+    letter-spacing: -.3px;
+  }
+  .site-table-sub {
+    font-size: 11.5px; color: var(--lg-muted); margin-top: 2px;
+    font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: .3px;
+  }
+
+  .site-table-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px; font-weight: 700;
+    background: rgba(165,0,52,.1); color: var(--lg-red);
+    padding: 5px 14px; border-radius: 20px;
+    letter-spacing: .5px;
+  }
+
+  /* ── SITE TABLE: 카테고리 색상 제거, 폰트 확대, 가운데 정렬 ── */
+  .site-tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px; /* 폰트 크기 확대 */
+  }
+
+  .site-tbl thead tr:first-child th {
+    background: var(--lg-dark);
+    color: #fff;
+    padding: 13px 14px;
+    font-weight: 600;
+    font-size: 14px; /* 폰트 크기 확대 */
+    letter-spacing: .3px;
+    text-align: center; /* 가운데 정렬 */
+    border-right: 1px solid rgba(255,255,255,.08);
+  }
+
+  .site-tbl thead tr.subhead th {
+    background: #252540;
+    color: rgba(255,255,255,.85);
+    font-size: 13px; /* 폰트 크기 확대 */
+    font-weight: 600;
+    padding: 9px 14px;
+    border-right: 1px solid rgba(255,255,255,.07);
+    text-align: center; /* 가운데 정렬 */
+  }
+
+  .site-tbl tbody tr { transition: background .15s; }
+  .site-tbl tbody tr:hover td { background: #fdf4f6; }
+
+  .site-tbl td {
+    padding: 11px 14px; /* 패딩 증가 */
+    border-bottom: 1px solid #f0f0f4;
+    border-right: 1px solid #f0f0f4;
+    text-align: center; /* 가운데 정렬 */
+    color: var(--lg-charcoal);
+    vertical-align: middle;
+    font-size: 14px; /* 폰트 크기 확대 */
+  }
+  .site-tbl td:first-child {
+    text-align: center; /* 가운데 정렬 */
+    font-weight: 700;
+    color: var(--lg-dark);
+    background: #fafbfc;
+    padding-left: 14px;
+    font-size: 14px; /* 폰트 크기 확대 */
+  }
+  .site-tbl td:last-child { border-right: none; }
+
+  /* row type styles */
+  .site-tbl .row-ref td { background: #f7f8fc; }
+  .site-tbl .row-ref td:first-child { color: var(--lg-gray); font-weight: 600; font-size: 13px; }
+  .site-tbl .row-total td {
+    background: #fff0f3;
+    font-weight: 700;
+    color: var(--lg-red);
+    border-top: 2px solid rgba(165,0,52,.2);
+  }
+  .site-tbl .row-total td:first-child { color: var(--lg-red); }
+  .site-tbl .row-cnt td {
+    background: #f4f6f8;
+    font-weight: 700;
+    color: var(--lg-dark);
+  }
+  .site-tbl .row-cnt td:first-child { color: var(--lg-dark); }
+  .site-tbl .row-grand td {
+    background: var(--lg-red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    border-top: 2px solid rgba(255,255,255,.2);
+  }
+  .site-tbl .row-grand td:first-child { color: #fff; }
+
+  /* 카테고리 색상 제거 - border-left 없음 */
+  .site-tbl .cat-leadership { }
+  .site-tbl .cat-job       { }
+  .site-tbl .cat-tech      { }
+  .site-tbl .cat-func      { }
+  .site-tbl .cat-cs        { }
+  .site-tbl .cat-culture   { }
+
+  /* totals cell highlight */
+  .site-tbl .val-total { font-weight: 700; color: var(--lg-dark); }
+  .site-tbl .val-highlight { color: var(--lg-red); font-weight: 700; }
+
+  /* legend strip */
+  .site-legend {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    padding: 12px 20px;
+    background: #f8f8f8;
+    border-top: 1px solid var(--lg-silver);
+    font-size: 12px; color: var(--lg-gray);
+  }
+  .legend-item { display: flex; align-items: center; gap: 5px; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
 
   /* radar container */
   .radar-container { display: flex; gap: 40px; align-items: center; }
@@ -427,7 +559,7 @@
     .radar-container { flex-direction: column; }
     .radar-chart-area { width: 100%; }
     .org-sub-wrap { grid-template-columns: repeat(2, 1fr); }
-.performance-grid { grid-template-columns: repeat(2, 1fr); }
+    .site-tbl { font-size: 12px; }
   }
 </style>
 </head>
@@ -473,16 +605,12 @@
         <div class="stat-label">총 교육 수료 인원</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">24,873<span class="stat-unit"> 시간</span></div>
-        <div class="stat-label">총 교육 시간(오프라인 기준)</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">2,399<span class="stat-unit"> 차수</span></div>
-        <div class="stat-label">총 교육 운영 차수</div>
+        <div class="stat-num">2,399<span class="stat-unit"> 회</span></div>
+        <div class="stat-label">연간 교육 운영 차수</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">4.75<span class="stat-unit"> 점</span></div>
-        <div class="stat-label">교육 만족도 평균</div>
+        <div class="stat-label">교육 만족도</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">14.7<span class="stat-unit"> 억원</span></div>
@@ -494,42 +622,42 @@
   <div class="section section-alt">
     <div class="section-title">Course Status</div>
     <div class="section-heading">교육과정 운영 현황</div>
-<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; margin-bottom: 0;">
-  <div style="background:var(--lg-white); border-radius:12px; padding:20px; box-shadow:0 2px 12px rgba(0,0,0,.06); display:flex; align-items:stretch;">
-    <canvas id="courseChart" style="width:100% !important; height:100% !important;"></canvas>
-  </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; margin-bottom: 0;">
+      <div style="background:var(--lg-white); border-radius:12px; padding:20px; box-shadow:0 2px 12px rgba(0,0,0,.06); display:flex; align-items:stretch;">
+        <canvas id="courseChart" style="width:100% !important; height:100% !important;"></canvas>
+      </div>
       <div>
-    <table class="lg-table" style="table-layout: fixed; width:100%;">
-      <thead>
-        <tr>
-          <th style="width:40%">담당 본부</th>
-          <th style="width:20%">운영 차수</th>
-          <th style="width:20%">만족도</th>
-          <th style="width:20%">투입EFT</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Employee eXperience담당</td><td>419 차수</td><td>4.72 / 5.0</td><td>3.9</td></tr>
-        <tr><td>MS Employee eXperience&amp;Growth팀</td><td>384 차수</td><td>4.71 / 5.0</td><td>3.2</td></tr>
-        <tr><td>생산기술Employee eXperience&amp;Growth팀</td><td>138 차수</td><td>4.71 / 5.0</td><td>1</td></tr>
-        <tr><td>한국CC&amp;S 역량개발팀</td><td>418 차수</td><td>4.96 / 5.0</td><td>3.9</td></tr>
-        <tr><td>CTO Employee eXperience&amp;Growth팀</td><td>95 차수</td><td>4.71 / 5.0</td><td>2</td></tr>
-        <tr><td>CTO SW공학(연)SW역량강화팀</td><td>251 차수</td><td>4.49 / 5.0</td><td>3</td></tr>
-        <tr><td>VS Employee eXperience&amp;Growth팀</td><td>212 차수</td><td>4.73 / 5.0</td><td>1.5</td></tr>
-        <tr><td>ES Employee eXperience&amp;Growth팀</td><td>44 차수</td><td>4.64 / 5.0</td><td>1</td></tr>
-        <tr><td>고객가치혁신 Employee eXperience&amp;Growth팀</td><td>142 차수</td><td>4.91 / 5.0</td><td>1</td></tr>
-        <tr><td>한국영업 Employee eXperience&amp;Growth팀</td><td>117 차수</td><td>4.76 / 5.0</td><td>1</td></tr>
-        <tr><td>세일즈역량육성팀</td><td>179 차수</td><td>4.86 / 5.0</td><td>2</td></tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td><strong>합계 / 평균</strong></td>
-          <td><strong>2,399</strong></td>
-          <td><strong>4.75 / 5.0</strong></td>
-          <td><strong>23.5</strong></td>
-        </tr>
-      </tfoot>
-    </table>
+        <table class="lg-table" style="table-layout: fixed; width:100%;">
+          <thead>
+            <tr>
+              <th style="width:40%">담당 본부</th>
+              <th style="width:20%">운영 차수</th>
+              <th style="width:20%">만족도</th>
+              <th style="width:20%">투입EFT</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Employee eXperience담당</td><td>419 차수</td><td>4.72 / 5.0</td><td>3.9</td></tr>
+            <tr><td>MS Employee eXperience&amp;Growth팀</td><td>384 차수</td><td>4.71 / 5.0</td><td>3.2</td></tr>
+            <tr><td>생산기술Employee eXperience&amp;Growth팀</td><td>138 차수</td><td>4.71 / 5.0</td><td>1</td></tr>
+            <tr><td>한국CC&amp;S 역량개발팀</td><td>418 차수</td><td>4.96 / 5.0</td><td>3.9</td></tr>
+            <tr><td>CTO Employee eXperience&amp;Growth팀</td><td>95 차수</td><td>4.71 / 5.0</td><td>2</td></tr>
+            <tr><td>CTO SW공학(연)SW역량강화팀</td><td>251 차수</td><td>4.49 / 5.0</td><td>3</td></tr>
+            <tr><td>VS Employee eXperience&amp;Growth팀</td><td>212 차수</td><td>4.73 / 5.0</td><td>1.5</td></tr>
+            <tr><td>ES Employee eXperience&amp;Growth팀</td><td>44 차수</td><td>4.64 / 5.0</td><td>1</td></tr>
+            <tr><td>고객가치혁신 Employee eXperience&amp;Growth팀</td><td>142 차수</td><td>4.91 / 5.0</td><td>1</td></tr>
+            <tr><td>한국영업 Employee eXperience&amp;Growth팀</td><td>117 차수</td><td>4.76 / 5.0</td><td>1</td></tr>
+            <tr><td>세일즈역량육성팀</td><td>179 차수</td><td>4.86 / 5.0</td><td>2</td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>합계 / 평균</strong></td>
+              <td><strong>2,399</strong></td>
+              <td><strong>4.75 / 5.0</strong></td>
+              <td><strong>23.5</strong></td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   </div>
@@ -558,7 +686,7 @@
         <div class="performance-title">마곡 운영 가이드</div>
         <div class="performance-desc">마곡 사이트 운영 가이드를 웹 기반으로 구축하여 현장 운영 기준을 표준화하고, 교육 운영 전반의 효율성을 제고하였습니다.</div>
       </button>
-      <button class="performance-card" onclick="openResource('lms_Evidence.png','image')">
+      <button class="performance-card" onclick="openResource('lms_Evidence.png','link')">
         <div class="performance-title">신규 LMS 시스템 도입 초기 안정화</div>
         <div class="performance-desc">신규 LMS 시스템 도입 후 초기 안정화 작업 및 운영 프로세스 매뉴얼을 구축하여 시스템 운영의 표준화와 안정적·지속적 운영 기반을 확보하였습니다.</div>
       </button>
@@ -618,7 +746,7 @@
       <strong>1. 연간 근무 가능 시간 : 총 근무 가능 시간: 1,752시간</strong>
     </div>
 
-    <h3 style="margin: 24px 0 12px; font-size:16px; color: var(--lg-dark);">    <div class="wf-box">2. 비가용 시간 및 실투입 시간 산정</h3>
+    <h3 style="margin: 24px 0 12px; font-size:16px; color: var(--lg-dark);">2. 비가용 시간 및 실투입 시간 산정</h3>
     <table class="wf-table">
       <thead>
         <tr><th>구분</th><th>시간</th><th>비중</th><th>산정 근거</th></tr>
@@ -640,54 +768,194 @@
       👉 실질 교육 운영 가능 시간: <strong style="color:var(--lg-red);">약 1,000시간 (57%)</strong>
     </div>
 
-    <div style="display:flex; justify-content:space-between; align-items:center; margin: 24px 0 8px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin: 28px 0 6px;">
       <h3 style="font-size:16px; color: var(--lg-dark);">3. 본부별 교육 운영 공수</h3>
-      <span style="font-size:12px; color:#777;">(단위: 시간)</span>
+      <span style="font-size:13px; color:#777;">(단위: 시간)</span>
     </div>
 
     <div class="wf-desc">
       본 운영 공수는 <b>'25년 전체 본부 카테고리별 교육 과정의 전체 Activity 운영시간 데이터를 기준으로 산출</b>하였으며
       해당 기준을 <b>'26년 교육 계획에 적용하여 도출된 결과값</b>입니다.<br><br>
-      ※ <b>총 공수 산출 로직</B> : 카테고리별 평균 공수+((교육인원-기준인원(15명))*5(공수계수))+((교육시간-기준시간(16시간))*10(공수계수))<br>
-      ※ 교육인원·교육시간 기준 : <b>교육 인원 15명 / 1회 교육 16시간</b><br>
+      ※ 기본 기준 : <b>1회 교육 16시간 / 교육 인원 15명</b><br>
+      ※ <b>총공수 산정식: 기준공수 + ((교육인원 - 15) × 5) + ((교육시간 - 16) × 10)</b><br>
       ※ 과정별 <b>교육시간 및 교육 인원 규모를 반영하여 운영 공수 산정</b>
     </div>
 
-    <div style="overflow-x:auto;">
-      <table class="wf-table" style="min-width:900px;">
-        <thead>
-          <tr>
-            <th>본부/구분</th>
-            <th>EX담당</th><th>한국CC&amp;S역량개발팀</th><th>MS EXG팀</th>
-            <th>생산기술EXG팀</th><th>CTO EXG팀</th><th>CTO SW역량강화팀</th>
-            <th>ES EXG팀</th><th>VS EXG팀</th><th>고객가치 EXG팀</th>
-            <th>한국영업본부EXG팀</th><th>세일즈역량육성팀</th><th>합계</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="wf-plan">
-            <td>26년 계획차수</td>
-            <td>304</td><td>243</td><td>189</td><td>88</td><td>174</td>
-            <td>216</td><td>55</td><td>368</td><td>90</td><td>109</td><td>148</td><td>1,984</td>
-          </tr>
-          <tr class="wf-cat"><td>리더십</td><td>3,804</td><td></td><td>167</td><td>368</td><td>226</td><td>516</td><td>200</td><td>64</td><td>468</td><td>169</td><td></td><td>5,981</td></tr>
-          <tr class="wf-cat"><td>직무</td><td>1,110</td><td></td><td>1,272</td><td>736</td><td>1,091</td><td>3,630</td><td>48</td><td>1,013</td><td>390</td><td>586</td><td>1,151</td><td>11,028</td></tr>
-          <tr class="wf-cat"><td>기술</td><td></td><td>4,055</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>4,055</td></tr>
-          <tr class="wf-cat"><td>기능직</td><td></td><td></td><td>400</td><td>34</td><td></td><td></td><td></td><td>196</td><td></td><td></td><td></td><td>630</td></tr>
-          <tr class="wf-cat"><td>고객응대</td><td></td><td>357</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>357</td></tr>
-          <tr class="wf-cat"><td>조직문화</td><td></td><td></td><td></td><td></td><td></td><td></td><td>197</td><td>327</td><td>3</td><td></td><td></td><td>528</td></tr>
-          <tr class="wf-total"><td>운영공수 총합</td><td>4,915</td><td>4,412</td><td>1,840</td><td>1,138</td><td>1,317</td><td>4,145</td><td>445</td><td>1,600</td><td>861</td><td>755</td><td>1,151</td><td>22,579</td></tr>
-          <tr class="wf-fte"><td>운영 FTE</td><td>4.3</td><td>3.9</td><td>2</td><td>0.8</td><td>1.5</td><td>3</td><td>0.4</td><td>1.5</td><td>1</td><td>1</td><td>1.7</td><td>21.1</td></tr>
-          <tr class="wf-fte"><td>행정 FTE</td><td>3</td><td></td><td></td><td></td><td>0.5</td><td>1</td><td>0.1</td><td></td><td></td><td></td><td>0.3</td><td>4.9</td></tr>
-          <tr class="wf-fte"><td>영상</td><td>2</td><td>2</td><td></td><td>0.5</td><td></td><td>1</td><td>0.5</td><td>0.5</td><td></td><td>2</td><td>1</td><td>9.5</td></tr>
-          <tr class="wf-people">
-            <td>총 인원</td>
-            <td>9.3(0.4▲)</td><td>5.9</td><td>2.0(1.2▼)</td><td>1.3(0.3▲)</td><td>2.0(1▼)</td>
-            <td>5.0(1▼)</td><td>1</td><td>2</td><td>1</td><td>3</td><td>3</td><td>35.5</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Legend -->
+    <div class="site-legend" style="border-radius:8px; margin-bottom:20px; border:1px solid var(--lg-silver);">
+      <span style="font-weight:600; color:var(--lg-dark); margin-right:4px; font-size:13px;">※ 기준공수:</span>
+      <span style="font-size:13px;">1회 교육당 평균 투입 공수(시간)</span>
+      <span style="font-weight:600; color:var(--lg-dark); margin-left:16px; font-size:13px;">※ 총공수:</span>
+      <span style="font-size:13px;">기준공수 + ((교육인원-15)×5) + ((교육시간-16)×10)</span>
     </div>
+
+    <div class="site-tables-wrap">
+
+      <!-- ────────────────
+           SITE 1 : 평택
+      ──────────────────── -->
+      <div class="site-table-block">
+        <div class="site-table-header">
+          <div class="site-table-icon">🏭</div>
+          <div class="site-table-meta">
+            <div class="site-table-name">1. 평택</div>
+            <div class="site-table-sub">EX담당 · MS EXG팀 · 생산기술EXG팀 · 한국CC&amp;S역량개발팀</div>
+          </div>
+          <div class="site-table-badge">4개 본부</div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="site-tbl">
+            <thead>
+              <tr>
+                <th rowspan="2" style="width:14%; text-align:center;">본부</th>
+                <th rowspan="2" style="width:9%;">구분</th>
+                <th colspan="4" style="background:#2d3a5a;">카테고리별 공수</th>
+                <th rowspan="2" style="background:var(--lg-red); width:10%;">총합계</th>
+              </tr>
+              <tr class="subhead">
+                <th>리더십</th>
+                <th>직무</th>
+                <th>기능직</th>
+                <th>조직문화</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- EX담당 -->
+              <tr class="row-ref"><td rowspan="3">EX담당</td><td>기준공수</td><td>26.5</td><td>6.0</td><td>—</td><td>—</td><td class="val-total">15.0</td></tr>
+              <tr><td>총공수</td><td>3,800.8</td><td>1,107.1</td><td>—</td><td>—</td><td class="val-total">4,907.9</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>132</td><td>168</td><td>—</td><td>—</td><td class="val-highlight">300</td></tr>
+              <!-- MS EXG팀 -->
+              <tr class="row-ref"><td rowspan="3">MS EXG팀</td><td>기준공수</td><td>8.4</td><td>8.6</td><td>35.3</td><td>—</td><td class="val-total">10.0</td></tr>
+              <tr><td>총공수</td><td>167.7</td><td>1,271.3</td><td>400.0</td><td>—</td><td class="val-total">1,839.0</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>25</td><td>154</td><td>10</td><td>—</td><td class="val-highlight">189</td></tr>
+              <!-- 생산기술EXG팀 -->
+              <tr class="row-ref"><td rowspan="3">생산기술EXG팀</td><td>기준공수</td><td>17.2</td><td>10.8</td><td>29.0</td><td>—</td><td class="val-total">12.5</td></tr>
+              <tr><td>총공수</td><td>368.1</td><td>737.3</td><td>33.8</td><td>—</td><td class="val-total">1,139.1</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>20</td><td>67</td><td>1</td><td>—</td><td class="val-highlight">88</td></tr>
+              <!-- 한국CC&S -->
+              <tr class="row-ref"><td rowspan="3">한국CC&amp;S</td><td>기준공수</td><td>—</td><td>7.7</td><td>—</td><td>—</td><td class="val-total">8.2</td></tr>
+              <tr><td>총공수</td><td>—</td><td>4,407.2</td><td>—</td><td>—</td><td class="val-total">4,407.2</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>—</td><td>486</td><td>—</td><td>—</td><td class="val-highlight">486</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="site-legend">
+          <span style="color:var(--lg-dark); font-weight:600; font-size:13px;">※ 기준공수:</span>
+          <span style="font-size:13px;">1회 교육당 평균 투입 공수(시간)</span>
+          <span style="color:var(--lg-dark); font-weight:600; margin-left:12px; font-size:13px;">※ 총공수:</span>
+          <span style="font-size:13px;">기준공수 + ((교육인원-15)×5) + ((교육시간-16)×10)</span>
+        </div>
+      </div>
+
+      <!-- ────────────────
+           SITE 2 : 마곡
+      ──────────────────── -->
+      <div class="site-table-block">
+        <div class="site-table-header">
+          <div class="site-table-icon">🏢</div>
+          <div class="site-table-meta">
+            <div class="site-table-name">2. 마곡</div>
+            <div class="site-table-sub">CTO EXG팀 · CTO SW역량강화팀 · ES EXG팀 · VS EXG팀 · 고객가치 EXG팀</div>
+          </div>
+          <div class="site-table-badge">5개 본부</div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="site-tbl">
+            <thead>
+              <tr>
+                <th rowspan="2" style="width:14%; text-align:center;">본부</th>
+                <th rowspan="2" style="width:9%;">구분</th>
+                <th colspan="4" style="background:#2d3a5a;">카테고리별 공수</th>
+                <th rowspan="2" style="background:var(--lg-red); width:10%;">총합계</th>
+              </tr>
+              <tr class="subhead">
+                <th>리더십</th>
+                <th>직무</th>
+                <th>기능직</th>
+                <th>조직문화</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- CTO EXG팀 -->
+              <tr class="row-ref"><td rowspan="3">CTO EXG팀</td><td>기준공수</td><td>7.6</td><td>8.5</td><td>—</td><td>—</td><td class="val-total">8.3</td></tr>
+              <tr><td>총공수</td><td>225.3</td><td>1,091.3</td><td>—</td><td>—</td><td class="val-total">1,316.6</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>33</td><td>141</td><td>—</td><td>—</td><td class="val-highlight">174</td></tr>
+              <!-- CTO SW역량강화팀 -->
+              <tr class="row-ref"><td rowspan="3">CTO SW역량강화팀</td><td>기준공수</td><td>40.1</td><td>12.7</td><td>—</td><td>—</td><td class="val-total">13.9</td></tr>
+              <tr><td>총공수</td><td>515.7</td><td>3,628.0</td><td>—</td><td>—</td><td class="val-total">4,143.6</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>9</td><td>207</td><td>—</td><td>—</td><td class="val-highlight">216</td></tr>
+              <!-- ES EXG팀 -->
+              <tr class="row-ref"><td rowspan="3">ES EXG팀</td><td>기준공수</td><td>4.2</td><td>3.6</td><td>—</td><td>15.7</td><td class="val-total">6.6</td></tr>
+              <tr><td>총공수</td><td>199.0</td><td>47.8</td><td>—</td><td>196.8</td><td class="val-total">443.6</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>35</td><td>8</td><td>—</td><td>12</td><td class="val-highlight">55</td></tr>
+              <!-- VS EXG팀 -->
+              <tr class="row-ref"><td rowspan="3">VS EXG팀</td><td>기준공수</td><td>6.2</td><td>2.8</td><td>17.5</td><td>16.5</td><td class="val-total">3.7</td></tr>
+              <tr><td>총공수</td><td>63.4</td><td>1,003.8</td><td>196.3</td><td>326.8</td><td class="val-total">1,590.3</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>10</td><td>336</td><td>9</td><td>13</td><td class="val-highlight">368</td></tr>
+              <!-- 고객가치 EXG팀 -->
+              <tr class="row-ref"><td rowspan="3">고객가치 EXG팀</td><td>기준공수</td><td>16.0</td><td>5.6</td><td>—</td><td>2.2</td><td class="val-total">8.8</td></tr>
+              <tr><td>총공수</td><td>467.1</td><td>389.8</td><td>—</td><td>3.3</td><td class="val-total">860.2</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>28</td><td>60</td><td>—</td><td>2</td><td class="val-highlight">90</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="site-legend">
+          <span style="color:var(--lg-dark); font-weight:600; font-size:13px;">※ 기준공수:</span>
+          <span style="font-size:13px;">1회 교육당 평균 투입 공수(시간)</span>
+          <span style="color:var(--lg-dark); font-weight:600; margin-left:12px; font-size:13px;">※ 총공수:</span>
+          <span style="font-size:13px;">기준공수 + ((교육인원-15)×5) + ((교육시간-16)×10)</span>
+        </div>
+      </div>
+
+      <!-- ────────────────
+           SITE 3 : 서울역
+      ──────────────────── -->
+      <div class="site-table-block">
+        <div class="site-table-header">
+          <div class="site-table-icon">🚉</div>
+          <div class="site-table-meta">
+            <div class="site-table-name">3. 서울역</div>
+            <div class="site-table-sub">한국영업본부 · 세일즈역량육성팀</div>
+          </div>
+          <div class="site-table-badge">2개 본부</div>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="site-tbl">
+            <thead>
+              <tr>
+                <th rowspan="2" style="width:14%; text-align:center;">본부</th>
+                <th rowspan="2" style="width:9%;">구분</th>
+                <th colspan="4" style="background:#2d3a5a;">카테고리별 공수</th>
+                <th rowspan="2" style="background:var(--lg-red); width:10%;">총합계</th>
+              </tr>
+              <tr class="subhead">
+                <th>리더십</th>
+                <th>직무</th>
+                <th>기능직</th>
+                <th>조직문화</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 한국영업본부 -->
+              <tr class="row-ref"><td rowspan="3">한국영업본부</td><td>기준공수</td><td>5.6</td><td>7.2</td><td>—</td><td>—</td><td class="val-total">6.9</td></tr>
+              <tr><td>총공수</td><td>168.5</td><td>585.1</td><td>—</td><td>—</td><td class="val-total">753.6</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>26</td><td>83</td><td>—</td><td>—</td><td class="val-highlight">109</td></tr>
+              <!-- 세일즈역량육성팀 -->
+              <tr class="row-ref"><td rowspan="3">세일즈역량육성팀</td><td>기준공수</td><td>—</td><td>7.7</td><td>—</td><td>—</td><td class="val-total">7.7</td></tr>
+              <tr><td>총공수</td><td>—</td><td>1,149.1</td><td>—</td><td>—</td><td class="val-total">1,149.1</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>—</td><td>148</td><td>—</td><td>—</td><td class="val-highlight">148</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="site-legend">
+          <span style="color:var(--lg-dark); font-weight:600; font-size:13px;">※ 기준공수:</span>
+          <span style="font-size:13px;">1회 교육당 평균 투입 공수(시간)</span>
+          <span style="color:var(--lg-dark); font-weight:600; margin-left:12px; font-size:13px;">※ 총공수:</span>
+          <span style="font-size:13px;">기준공수 + ((교육인원-15)×5) + ((교육시간-16)×10)</span>
+        </div>
+      </div>
+
+    </div><!-- /site-tables-wrap -->
   </div>
 </div>
 
@@ -780,10 +1048,9 @@
   <div class="hero">
     <div class="hero-label">Cost Proposal</div>
     <h1>비용제안</h1>
-    <p>운영 기준 및 산출 로직에 따라 비용을 산정하였으며, 2025년 대비 2026년 단가 변동과 본부별 배분 현황을 함께 제시드립니다.</p>
+    <p>투명하고 합리적인 비용 구조로 최고의 교육 서비스를 제공합니다. 2025년 대비 2026년 단가 비교 및 본부별 배분 현황을 확인하세요.</p>
   </div>
 
-  <!-- 요약 카드 -->
   <div class="cost-section">
     <div class="cost-summary-grid">
       <div class="cost-card">
@@ -808,109 +1075,109 @@
       </div>
     </div>
 
-<!-- Section 1 : 단가 비교 -->
-<div class="cost-section-title">'25년 vs '26년 단가 비교</div>
-<div class="cost-section-desc">기존계약 3% 인상 기준 · 단위: 천원</div>
+    <div class="cost-section-title">'25년 vs '26년 단가 비교</div>
+    <div class="cost-section-desc">기존계약 3% 인상 기준 · 단위: 천원</div>
 
-<div class="cost-table-wrap">
-  <table class="cost-table" style="width:100%; table-layout:fixed;">
-    <thead>
-      <tr>
-        <th rowspan="2" colspan="2" style="width:12%">구분</th>
-        <th colspan="4">'25년 단가</th>
-        <th colspan="4" class="th-red">'26년 단가</th>
-        <th rowspan="2" style="width:6%">인상률</th>
-      </tr>
-      <tr>
-        <th class="th-sub" style="width:5%">인원수</th>
-        <th class="th-sub" style="width:4%">개월</th>
-        <th class="th-sub" style="width:6%">단가</th>
-        <th class="th-sub" style="width:9%">금액</th>
-        <th class="th-sub2" style="width:5%">인원수</th>
-        <th class="th-sub2" style="width:4%">개월</th>
-        <th class="th-sub2" style="width:6%">단가</th>
-        <th class="th-sub2" style="width:9%">금액</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="td-cat" rowspan="7" style="width:6%">기존<br>계약</td>
-        <td class="td-sub">매니저</td>
-        <td>1</td><td>12</td><td>8,876</td><td>106,512</td>
-        <td>1.0</td><td>12</td><td>9,142</td><td>109,707</td>
-        <td rowspan="7"><span class="cost-badge">3%</span></td>
-      </tr>
-      <tr>
-        <td class="td-sub">교육운영</td>
-        <td>24</td><td>12</td><td>5,318</td><td>1,499,676</td>
-        <td>22.0</td><td>12</td><td>5,478</td><td>1,446,071</td>
-      </tr>
-      <tr>
-        <td class="td-sub">교육행정①</td>
-        <td>2</td><td>12</td><td>5,704</td><td>136,896</td>
-        <td rowspan="2">4.0</td><td rowspan="2">12</td><td rowspan="2">5,478</td><td rowspan="2">262,944</td>
-      </tr>
-      <tr>
-        <td class="td-sub">교육행정②</td>
-        <td>2</td><td>12</td><td>4,931</td><td>118,344</td>
-      </tr>
-      <tr>
-        <td class="td-sub">영상제작①</td>
-        <td>1</td><td>12</td><td>6,270</td><td>75,240</td>
-        <td rowspan="2">9.5</td><td rowspan="2">12</td><td rowspan="2">6,053</td><td rowspan="2">690,042</td>
-      </tr>
-      <tr>
-        <td class="td-sub">영상제작②</td>
-        <td>10</td><td>12</td><td>5,484</td><td>625,176</td>
-      </tr>
-    <tr>
-  <td class="td-total td-left" style="padding-left:16px;">① 소계</td>
-  <td class="td-total">39</td><td class="td-total"></td><td class="td-total"></td><td class="td-total">2,561,844</td>
-  <td class="td-total">36.5</td><td class="td-total"></td><td class="td-total"></td><td class="td-total" colspan="2">2,508,764</td>
-</tr>
-      <tr>
-        <td class="td-cat" rowspan="5">기타<br>정산금</td>
-        <td class="td-sub">국내 출장비</td>
-        <td colspan="3"></td><td>2,084</td>
-        <td colspan="3"></td><td>1,546</td>
-        <td class="td-note">실비정산내역</td>
-      </tr>
-      <tr>
-        <td class="td-sub">OT 수당</td>
-        <td colspan="3"></td><td>506</td>
-        <td colspan="3"></td><td>1,585</td>
-        <td class="td-note">*EXG팀 AX임원과정</td>
-      </tr>
-      <tr>
-        <td class="td-sub">서울 중식대</td>
-        <td colspan="3"></td><td>42,900</td>
-        <td colspan="3"></td><td>31,416</td>
-        <td class="td-note">서울지역 17명 대상(7,700원)</td>
-      </tr>
-      <tr>
-        <td class="td-sub">인건비소급</td>
-        <td colspan="3"></td><td>7,871</td>
-        <td colspan="3"></td><td>—</td>
-        <td></td>
-      </tr>
-<tr>
-  <td class="td-total td-left" style="padding-left:16px;">② 소계</td>
-  <td class="td-total" colspan="3"></td><td class="td-total">53,361</td>
-  <td class="td-total" colspan="3"></td><td class="td-total" colspan="2">34,547</td>
-</tr>
-      <tr>
-        <td class="td-grand" colspan="2">총액 (①+②)</td>
-        <td class="td-grand">39</td><td class="td-grand" colspan="2"></td><td class="td-grand">2,615,205</td>
-        <td class="td-grand2">36.5</td><td class="td-grand2" colspan="2"></td><td class="td-grand2">2,543,310</td>
-        <td class="td-grand2"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <div class="cost-table-wrap">
+      <table class="cost-table" style="width:100%; table-layout:fixed;">
+        <thead>
+          <tr>
+            <th rowspan="2" colspan="2" style="width:12%">구분</th>
+            <th colspan="4">'25년 단가</th>
+            <th colspan="4" class="th-red">'26년 단가</th>
+            <th rowspan="2" style="width:6%">인상률</th>
+          </tr>
+          <tr>
+            <th class="th-sub" style="width:5%">인원수</th>
+            <th class="th-sub" style="width:4%">개월</th>
+            <th class="th-sub" style="width:6%">단가</th>
+            <th class="th-sub" style="width:9%">금액</th>
+            <th class="th-sub2" style="width:5%">인원수</th>
+            <th class="th-sub2" style="width:4%">개월</th>
+            <th class="th-sub2" style="width:6%">단가</th>
+            <th class="th-sub2" style="width:9%">금액</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-cat" rowspan="7" style="width:6%">기존<br>계약</td>
+            <td class="td-sub">매니저</td>
+            <td>1</td><td>12</td><td>8,876</td><td>106,512</td>
+            <td>1.0</td><td>12</td><td>9,142</td><td>109,707</td>
+            <td rowspan="7"><span class="cost-badge">3%</span></td>
+          </tr>
+          <tr>
+            <td class="td-sub">교육운영</td>
+            <td>24</td><td>12</td><td>5,318</td><td>1,499,676</td>
+            <td>22.0</td><td>12</td><td>5,478</td><td>1,446,071</td>
+          </tr>
+          <tr>
+            <td class="td-sub">교육행정①</td>
+            <td>2</td><td>12</td><td>5,704</td><td>136,896</td>
+            <td rowspan="2">4.0</td><td rowspan="2">12</td><td rowspan="2">5,478</td><td rowspan="2">262,944</td>
+          </tr>
+          <tr>
+            <td class="td-sub">교육행정②</td>
+            <td>2</td><td>12</td><td>4,931</td><td>118,344</td>
+          </tr>
+          <tr>
+            <td class="td-sub">영상제작①</td>
+            <td>1</td><td>12</td><td>6,270</td><td>75,240</td>
+            <td rowspan="2">9.5</td><td rowspan="2">12</td><td rowspan="2">6,053</td><td rowspan="2">690,042</td>
+          </tr>
+          <tr>
+            <td class="td-sub">영상제작②</td>
+            <td>10</td><td>12</td><td>5,484</td><td>625,176</td>
+          </tr>
+          <tr>
+            <td class="td-total td-left" style="padding-left:16px;">① 소계</td>
+            <td class="td-total">39</td><td class="td-total"></td><td class="td-total"></td><td class="td-total">2,561,844</td>
+            <td class="td-total">36.5</td><td class="td-total"></td><td class="td-total"></td><td class="td-total">2,508,764</td>
+            <td class="td-total"></td>
+          </tr>
+          <tr>
+            <td class="td-cat" rowspan="5">기타<br>정산금</td>
+            <td class="td-sub">국내 출장비</td>
+            <td colspan="3"></td><td>2,084</td>
+            <td colspan="3"></td><td>1,546</td>
+            <td class="td-note">실비정산내역(유철)</td>
+          </tr>
+          <tr>
+            <td class="td-sub">OT 수당</td>
+            <td colspan="3"></td><td>506</td>
+            <td colspan="3"></td><td>1,585</td>
+            <td class="td-note">*EXG팀 AX임원과정</td>
+          </tr>
+          <tr>
+            <td class="td-sub">서울 중식대</td>
+            <td colspan="3"></td><td>42,900</td>
+            <td colspan="3"></td><td>31,416</td>
+            <td class="td-note">서울지역 17명 대상(7,700원)</td>
+          </tr>
+          <tr>
+            <td class="td-sub">인건비소급</td>
+            <td colspan="3"></td><td>7,871</td>
+            <td colspan="3"></td><td>—</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="td-total td-left" style="padding-left:16px;">② 소계</td>
+            <td class="td-total" colspan="3"></td><td class="td-total">53,361</td>
+            <td class="td-total" colspan="3"></td><td class="td-total">34,547</td>
+            <td class="td-total"></td>
+          </tr>
+          <tr>
+            <td class="td-grand" colspan="2">총액 (①+②)</td>
+            <td class="td-grand">39</td><td class="td-grand" colspan="2"></td><td class="td-grand">2,615,205</td>
+            <td class="td-grand2">36.5</td><td class="td-grand2" colspan="2"></td><td class="td-grand2">2,543,310</td>
+            <td class="td-grand2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-<div style="height:1px; background:var(--lg-silver); margin: 32px 0;"></div>
+    <div style="height:1px; background:var(--lg-silver); margin: 32px 0;"></div>
 
-    <!-- Section 2 : 본부별 배분 -->
     <div class="cost-section-title">본부별 비용 배분 ('26년 제안)</div>
     <div class="cost-section-desc">운영자 22명 · 영상담당자 9.5명 · 행정 4명 · Manager 1명 기준 · 단위: 천원</div>
 
@@ -948,8 +1215,6 @@
         <tbody id="dept-tbody-main"></tbody>
       </table>
     </div>
-
-
   </div>
 </div>
 
@@ -960,7 +1225,7 @@
   <div class="hero">
     <div class="hero-label">Team Composition</div>
     <h1>인원구성</h1>
-    <p>교육 운영 경험을 바탕으로 LG전자 교육 서비스를 안정적으로 운영합니다. 운영 과정에서 필요한 역할과 전문성을 기반으로 프로젝트를 지원합니다.</p>
+    <p>검증된 전문가들이 LG전자의 교육 서비스를 책임집니다. 각 분야 최고의 전문성으로 프로젝트의 성공을 보장합니다.</p>
   </div>
 
   <div class="section">
@@ -968,107 +1233,41 @@
     <div class="section-heading">조직도</div>
 
     <style>
-      /* ── PYRAMID ORG CHART ── */
       .pyr-wrap { display:flex; flex-direction:column; align-items:center; gap:0; width:100%; }
-
-      /* 각 레이어 */
       .pyr-row { display:flex; justify-content:center; gap:12px; width:100%; position:relative; }
-
-      /* 수직 연결선 */
       .pyr-vline { width:2px; height:24px; background:var(--lg-silver); margin:0 auto; }
-
-      /* 레이어1 – 팀장 */
-      .pyr-l1 .pyr-card {
-        background: var(--lg-dark); color:#fff;
-        border:none; min-width:220px; padding:14px 28px;
-        box-shadow:0 4px 20px rgba(0,0,0,.2);
-      }
+      .pyr-l1 .pyr-card { background: var(--lg-dark); color:#fff; border:none; min-width:220px; padding:14px 28px; box-shadow:0 4px 20px rgba(0,0,0,.2); }
       .pyr-l1 .pyr-card .pc-name { color:#fff; font-size:15px; }
       .pyr-l1 .pyr-card .pc-sub  { color:rgba(255,255,255,.55); }
-
-      /* 레이어2 – 매니저 3인 */
-      .pyr-l2 .pyr-card {
-        background: var(--lg-red); color:#fff;
-        border:none; min-width:180px; padding:12px 18px;
-        box-shadow:0 3px 14px rgba(165,0,52,.3);
-      }
+      .pyr-l2 .pyr-card { background: var(--lg-red); color:#fff; border:none; min-width:180px; padding:12px 18px; box-shadow:0 3px 14px rgba(165,0,52,.3); }
       .pyr-l2 .pyr-card .pc-name { color:#fff; font-size:13px; }
       .pyr-l2 .pyr-card .pc-sub  { color:rgba(255,255,255,.65); font-size:11px; }
-
-      /* 레이어3 – 그룹 카드 */
-      .pyr-l3 .pyr-group {
-        background: var(--lg-white);
-        border: 1.5px solid var(--lg-silver);
-        border-top: 3px solid var(--lg-red);
-        border-radius:12px; padding:14px 14px 12px;
-        min-width:0; flex:1;
-        box-shadow:0 2px 10px rgba(0,0,0,.05);
-        transition: transform .2s, box-shadow .2s;
-      }
+      .pyr-l3 .pyr-group { background: var(--lg-white); border: 1.5px solid var(--lg-silver); border-top: 3px solid var(--lg-red); border-radius:12px; padding:14px 14px 12px; min-width:0; flex:1; box-shadow:0 2px 10px rgba(0,0,0,.05); transition: transform .2s, box-shadow .2s; }
       .pyr-l3 .pyr-group:hover { transform:translateY(-3px); box-shadow:0 6px 20px rgba(0,0,0,.1); }
-
-      .pg-header {
-        font-size:12.5px; font-weight:700; color:var(--lg-dark);
-        margin-bottom:10px; padding-bottom:8px;
-        border-bottom:1px solid var(--lg-silver);
-        display:flex; align-items:center; gap:6px;
-      }
-      .pg-header .pg-icon {
-        width:22px; height:22px; border-radius:6px;
-        background:rgba(165,0,52,.1);
-        display:flex; align-items:center; justify-content:center;
-        font-size:12px; flex-shrink:0;
-      }
-
-      /* 직급별 pill */
+      .pg-header { font-size:12.5px; font-weight:700; color:var(--lg-dark); margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid var(--lg-silver); display:flex; align-items:center; gap:6px; }
+      .pg-header .pg-icon { width:22px; height:22px; border-radius:6px; background:rgba(165,0,52,.1); display:flex; align-items:center; justify-content:center; font-size:12px; flex-shrink:0; }
       .pg-members { display:flex; flex-wrap:wrap; gap:6px; }
-      .pm-pill {
-        display:flex; align-items:center; gap:5px;
-        padding:4px 10px; border-radius:20px;
-        font-size:11.5px; font-weight:500;
-        transition: background .15s;
-      }
-      .pm-pill.leader {
-        background:#fff0f3; color:var(--lg-red);
-        border:1px solid rgba(165,0,52,.25); font-weight:700;
-      }
-      .pm-pill.senior {
-        background:#f7f8fc; color:#333;
-        border:1px solid var(--lg-silver);
-      }
-      .pm-pill.staff {
-        background:#fafafa; color:#666;
-        border:1px solid #ebebeb;
-      }
-      .pm-pill .pm-rank {
-        font-size:9.5px; font-weight:600; padding:1px 5px;
-        border-radius:3px;
-      }
+      .pm-pill { display:flex; align-items:center; gap:5px; padding:4px 10px; border-radius:20px; font-size:11.5px; font-weight:500; transition: background .15s; }
+      .pm-pill.leader { background:#fff0f3; color:var(--lg-red); border:1px solid rgba(165,0,52,.25); font-weight:700; }
+      .pm-pill.senior { background:#f7f8fc; color:#333; border:1px solid var(--lg-silver); }
+      .pm-pill.staff  { background:#fafafa; color:#666; border:1px solid #ebebeb; }
+      .pm-pill .pm-rank { font-size:9.5px; font-weight:600; padding:1px 5px; border-radius:3px; }
       .pm-pill.leader .pm-rank { background:rgba(165,0,52,.15); color:var(--lg-red); }
       .pm-pill.senior .pm-rank { background:#e8eaf0; color:#555; }
       .pm-pill.staff  .pm-rank { background:#f0f0f0; color:#888; }
-
-      /* 수평 연결 바 */
-      .pyr-hbar {
-        height:2px; background:var(--lg-silver);
-        width:calc(100% - 60px); margin: 0 30px;
-      }
+      .pyr-hbar { height:2px; background:var(--lg-silver); width:calc(100% - 60px); margin: 0 30px; }
+      .pyr-card { border-radius:14px; }
     </style>
 
     <div class="pyr-wrap">
-
-      <!-- L1 : 팀장 -->
       <div class="pyr-row pyr-l1">
         <div class="pyr-card" style="border-radius:14px; text-align:center;">
           <div class="pc-name" style="font-size:15px; font-weight:700; margin-bottom:4px;">교육서비스센터 팀장</div>
           <div class="pc-sub" style="font-size:12px;">총괄 책임자 · 권민서 팀장</div>
         </div>
       </div>
-
       <div class="pyr-vline"></div>
       <div class="pyr-hbar"></div>
-
-      <!-- L2 : 매니저 3인 -->
       <div class="pyr-row pyr-l2" style="gap:16px;">
         <div class="pyr-card" style="border-radius:12px; text-align:center;">
           <div class="pc-name" style="font-weight:700; margin-bottom:3px;">평택 현장대리인</div>
@@ -1083,18 +1282,13 @@
           <div class="pc-sub">박진태 선임</div>
         </div>
       </div>
-
       <div class="pyr-vline"></div>
       <div class="pyr-hbar"></div>
-
-      <!-- L3 : 4개 그룹 -->
       <div class="pyr-row pyr-l3" style="gap:14px; align-items:start;">
-
-        <!-- 평택 -->
         <div class="pyr-group">
           <div class="pg-header"><span class="pg-icon">🏭</span>평택 교육운영자 <span style="margin-left:auto; font-size:11px; color:#999; font-weight:400;">10명</span></div>
           <div class="pg-members">
-            <span class="pm-pill senior"><span class="pm-rank">선임</span>최부경</span>
+            <span class="pm-pill leader"><span class="pm-rank">선임</span>최부경</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>정보연</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>최예림</span>
             <span class="pm-pill staff"><span class="pm-rank">사원</span>공선윤</span>
@@ -1106,12 +1300,10 @@
             <span class="pm-pill staff"><span class="pm-rank">사원</span>허린</span>
           </div>
         </div>
-
-        <!-- 마곡 -->
         <div class="pyr-group">
           <div class="pg-header"><span class="pg-icon">🏢</span>마곡 교육운영자 <span style="margin-left:auto; font-size:11px; color:#999; font-weight:400;">8명</span></div>
           <div class="pg-members">
-            <span class="pm-pill senior"><span class="pm-rank">선임</span>김미진</span>
+            <span class="pm-pill leader"><span class="pm-rank">선임</span>김미진</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>선송이</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>안현아</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>전수현</span>
@@ -1121,8 +1313,6 @@
             <span class="pm-pill staff"><span class="pm-rank">사원</span>한지영</span>
           </div>
         </div>
-
-        <!-- 서울역 -->
         <div class="pyr-group">
           <div class="pg-header"><span class="pg-icon">🚉</span>서울역 교육운영자 <span style="margin-left:auto; font-size:11px; color:#999; font-weight:400;">3명</span></div>
           <div class="pg-members">
@@ -1131,12 +1321,10 @@
             <span class="pm-pill staff"><span class="pm-rank">사원</span>김장미</span>
           </div>
         </div>
-
-        <!-- 영상 PD -->
         <div class="pyr-group">
           <div class="pg-header"><span class="pg-icon">🎬</span>콘텐츠제작 PD <span style="margin-left:auto; font-size:11px; color:#999; font-weight:400;">9명</span></div>
           <div class="pg-members">
-            <span class="pm-pill senior"><span class="pm-rank">PD</span>이민웅</span>
+            <span class="pm-pill leader"><span class="pm-rank">PD</span>이민웅</span>
             <span class="pm-pill senior"><span class="pm-rank">PD</span>김효경</span>
             <span class="pm-pill senior"><span class="pm-rank">PD</span>박영진</span>
             <span class="pm-pill senior"><span class="pm-rank">PD</span>박지은</span>
@@ -1147,9 +1335,8 @@
             <span class="pm-pill senior"><span class="pm-rank">PD</span>장서련</span>
           </div>
         </div>
-
-      </div><!-- /pyr-l3 -->
-    </div><!-- /pyr-wrap -->
+      </div>
+    </div>
   </div>
 
   <div class="section section-alt">
@@ -1200,18 +1387,15 @@
   </div>
 </div>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
 <script>
-// ── TAB SWITCHING ──
 function showTab(index) {
   document.querySelectorAll('.tab-btn').forEach((btn, i) => btn.classList.toggle('active', i === index));
   document.querySelectorAll('.tab-content').forEach((content, i) => content.classList.toggle('active', i === index));
 }
 
-// ── MODAL ──
 function openResource(url, type) {
   if (!url || url.startsWith('YOUR_')) { alert('여기에 실제 URL 또는 이미지 경로를 연결해주세요.'); return; }
   if (type === 'image') {
@@ -1228,8 +1412,15 @@ function forceCloseImageModal() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') forceCloseImageModal(); });
 
-// ── COURSE BAR CHART (Tab 0) ──
+// ── 총공수 계산 함수 ──
+// 총공수 = 기준공수 + ((교육인원 - 15) * 5) + ((교육시간 - 16) * 10)
+function calcTotalCost(baseCost, headcount, hours) {
+  if (baseCost === null || baseCost === undefined) return null;
+  return baseCost + ((headcount - 15) * 5) + ((hours - 16) * 10);
+}
+
 window.addEventListener('load', function() {
+  // ── COURSE BAR CHART ──
   const ctx = document.getElementById('courseChart');
   if (ctx) {
     new Chart(ctx.getContext('2d'), {
@@ -1266,7 +1457,7 @@ window.addEventListener('load', function() {
     });
   }
 
-  // ── RADAR CHART (Tab 4) ──
+  // ── RADAR CHART ──
   const rctx = document.getElementById('radarChart');
   if (rctx) {
     const scores = [4.7, 4.0, 4.0, 4.0, 3.5];
