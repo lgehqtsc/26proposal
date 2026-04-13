@@ -136,7 +136,7 @@
     font-size: 13.5px; font-family: 'Montserrat', sans-serif; font-weight: 700;
     letter-spacing: 3px; text-transform: uppercase; color: var(--lg-red); margin-bottom: 8px;
   }
-  .section-heading { font-size: 27px; font-weight: 800; color: var(--lg-dark); margin-bottom: 32px; letter-spacing: -0.5px; }
+  .section-heading { font-size: 27px; font-weight: 800; color: var(--lg-dark); margin-bottom: 6px; letter-spacing: -0.5px; }
 
   .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
   .stat-card {
@@ -1008,8 +1008,8 @@
             <tr>
               <th style="width:40%">담당 본부</th>
               <th style="width:20%">운영 차수</th>
-              <th style="width:20%">만족도</th>
-              <th style="width:20%">투입EFT</th>
+              <th style="width:20%">평균 만족도</th>
+              <th style="width:20%">투입 FTE</th>
             </tr>
           </thead>
           <tbody>
@@ -1089,7 +1089,7 @@
       </div>
       <div style="width:1px; height:40px; background:rgba(255,255,255,.1);"></div>
       <div>
-        <div style="font-family:'Montserrat',sans-serif; font-size: 23px; font-weight:900; color:#e05; line-height:1;">▼ 1.79%</div>
+        <div style="font-family:'Montserrat',sans-serif; font-size: 23px; font-weight:900;  color:var(--lg-red); line-height:1;">▼ 1.79%</div>
         <div style="font-size: 13.5px; color:rgba(255,255,255,.5); margin-top:4px;">전년(3,346건) 대비 61건 감소</div>
       </div>
       <div style="width:1px; height:40px; background:rgba(255,255,255,.1);"></div>
@@ -1132,13 +1132,13 @@
       <div class="two-col" style="gap:24px;">
         <div style="display:flex; flex-direction:column; gap:14px;">
           <div style="border-left:3px solid var(--lg-red); padding-left:14px; font-size: 13.5px; color:#555; line-height:1.8;">
-            <strong style="color:var(--lg-red);">* CTO EXG팀</strong> 영상담당자 1인 감소 및 EXG담당 내 순차적 육아휴직(6월, 9월) 발생으로 신규 인력 수급 진행되어 인력 교체 과정에서 제작 건수 일부 조정 및 감소
+            <strong style="color:var(--lg-red);">* CTO EXG팀</strong> <br>영상담당자 1인 감소 및 EXG담당 내 순차적 육아휴직(6월, 9월) 발생으로 신규 인력 수급 진행되어 인력 교체 과정에서 제작 건수 일부 조정 및 감소
           </div>
           <div style="border-left:3px solid var(--lg-red); padding-left:14px; font-size: 13.5px; color:#555; line-height:1.8;">
-            <strong style="color:var(--lg-red);">* 난이도 높은 촬영</strong> ① 기획이 필요한 영상 ② 촬영자의 주관적 판단 개입 여부 ③ 고정된 카메라 외 카메라 무빙의 필요성 ④ 멀티캠의 사용여부 ⑤ 외부 로케이션 촬영 진행 여부
+            <strong style="color:var(--lg-red);">* 난이도 높은 촬영</strong> <br>① 기획이 필요한 영상 ② 촬영자의 주관적 판단 개입 여부 ③ 고정된 카메라 외 카메라 무빙의 필요성 ④ 멀티캠의 사용여부 <br>⑤ 외부 로케이션 촬영 진행 여부
           </div>
           <div style="border-left:3px solid var(--lg-red); padding-left:14px; font-size: 13.5px; color:#555; line-height:1.8;">
-            <strong style="color:var(--lg-red);">* 난이도 높은 편집</strong> ① 모션그래픽 작업 ② 단순 컷 편집 외 콘티 기반 편집 ③ 오프닝, 클로징 제작 ④ 복합한 공정이 필요한 작업(음악 삽입, 자막 추가, 색 보정 등)
+            <strong style="color:var(--lg-red);">* 난이도 높은 편집</strong> <br>① 모션그래픽 작업 ② 단순 컷 편집 외 콘티 기반 편집 ③ 오프닝, 클로징 제작 ④ 복합한 공정이 필요한 작업(음악 삽입, 자막 추가, 색 보정 등)
           </div>
         </div>
         <div style="display:flex; flex-direction:column; gap:14px;">
@@ -1148,15 +1148,274 @@
           </div>
           <div style="border-left:3px solid var(--lg-red); padding-left:14px; font-size: 13.5px; color:#555; line-height:1.8;">
             <strong style="color:var(--lg-red);">* 분포도 등급 설명</strong><br>
-            A등급 (짧은 시간 / 높은 복잡도): <strong>581건</strong><br>
-            S등급 (긴 시간 / 높은 복잡도): <strong>142건</strong><br>
+            B등급 (긴 시간 / 낮은 복잡도): <strong>1,030건</strong><br>
             C등급 (짧은 시간 / 낮은 복잡도): <strong>710건</strong><br>
-            B등급 (긴 시간 / 낮은 복잡도): <strong>1,030건</strong>
+            A등급 (짧은 시간 / 높은 복잡도): <strong>581건</strong><br>
+            S등급 (긴 시간 / 높은 복잡도): <strong>142건</strong>
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
+<!-- ── '25년 영상제작 주요실적 ── -->
+<div class="section">
+  <div class="section-title">Key Achievements · Video</div>
+  <div class="section-heading">주요 실적(영상)</div>
+  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px;">
+
+    <!-- S등급 1 -->
+    <a href="http://edxlearning.lge.com/vod/int/001/A003/2026/04/13/d3c0f68e-dd3d-4c02-9d3f-44743b1fe95c.mp4" target="_blank" rel="noopener"
+       style="background:var(--lg-dark); border-radius:14px; overflow:hidden; text-decoration:none; display:block; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.25)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden;">
+        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_S1/mqdefault.jpg" alt="S등급 영상 1" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <div style="width:44px; height:44px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:#A50034; color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">S GRADE</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#A50034; margin-bottom:5px;">
+</div>
+        <div style="font-size:13px; font-weight:700; color:#fff; line-height:1.45; margin-bottom:4px;">보이는 라디오 직장인들</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.45);"></div>
+      </div>
+    </a>
+
+    <!-- S등급 2 -->
+    <a href="http://edxlearning.lge.com/vod/int/001/A003/2026/04/13/e3a6877a-55b4-4e2d-bed3-6e6b6a86c8a6.mp4" target="_blank" rel="noopener"
+       style="background:var(--lg-dark); border-radius:14px; overflow:hidden; text-decoration:none; display:block; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.25)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden;">
+        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_S2/mqdefault.jpg" alt="S등급 영상 2" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <div style="width:44px; height:44px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:#A50034; color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">S GRADE</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#A50034; margin-bottom:5px;"></div>
+        <div style="font-size:13px; font-weight:700; color:#fff; line-height:1.45; margin-bottom:4px;">타운홀미팅 스케치</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.45);"></div>
+      </div>
+    </a>
+
+ <!-- S등급 3 -->
+    <a href="https://youtube.com/shorts/4v1X_b9RdMA?si=yeUPPwP23RNL5YQ0" target="_blank" rel="noopener"
+       style="background:var(--lg-dark); border-radius:14px; overflow:hidden; text-decoration:none; display:block; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.25)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden;">
+        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_S2/mqdefault.jpg" alt="S등급 영상 2" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <div style="width:44px; height:44px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:#A50034; color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">S GRADE</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#A50034; margin-bottom:5px;"></div>
+        <div style="font-size:13px; font-weight:700; color:#fff; line-height:1.45; margin-bottom:4px;">엘클립 LG코드제로A7</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.45);"></div>
+      </div>
+    </a>
+
+    <!-- A등급 1-->
+    <a href="http://edxlearning.lge.com/vod/int/001/A003/2026/04/13/bfebb352-fb2b-4817-9c28-188a8a7c4077.mp4" target="_blank" rel="noopener"
+       style="background:var(--lg-dark); border-radius:14px; overflow:hidden; text-decoration:none; display:block; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.25)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden;">
+        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_A1/mqdefault.jpg" alt="A등급 영상" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <div style="width:44px; height:44px; background:rgba(192,90,0,.85); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:#c05a00; color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">A GRADE</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#e07020; margin-bottom:5px;"></div>
+        <div style="font-size:13px; font-weight:700; color:#fff; line-height:1.45; margin-bottom:4px;">휴런 in 제주</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.45);"></div>
+      </div>
+    </a>
+
+   <!-- A등급 2 -->
+    <a href="http://edxlearning.lge.com/vod/int/001/A003/2026/04/13/6377d6a5-1b74-40c1-be6e-008751f3f95c.mp4" target="_blank" rel="noopener"
+       style="background:var(--lg-dark); border-radius:14px; overflow:hidden; text-decoration:none; display:block; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.25)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden;">
+        <img src="https://img.youtube.com/vi/YOUR_VIDEO_ID_A1/mqdefault.jpg" alt="A등급 영상" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <div style="width:44px; height:44px; background:rgba(192,90,0,.85); border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:#c05a00; color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">A GRADE</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#e07020; margin-bottom:5px;"></div>
+        <div style="font-size:13px; font-weight:700; color:#fff; line-height:1.45; margin-bottom:4px;">HOUSE 1958</div>
+        <div style="font-size:11px; color:rgba(255,255,255,.45);"></div>
+      </div>
+    </a>
+
+  </div>
+</div>
+<!-- ── 디자인 작업물 주요실적 ── -->
+<div class="section section-alt">
+  <div class="section-title">Key Achievements · Design</div>
+  <div class="section-heading">주요 실적(디자인)</div>
+  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px;">
+
+    <!-- 디자인 1 -->
+    <div onclick="openResource('design_01.jpg','image')"
+       style="background:var(--lg-white); border:1px solid var(--lg-silver); border-radius:14px; overflow:hidden; cursor:pointer; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden; background:#f0f0f0;">
+        <img src="design_01.jpg" alt="디자인 작업물 1"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute; inset:0; background:rgba(26,26,46,0); display:flex; align-items:center; justify-content:center; transition:background .2s;"
+             onmouseover="this.style.background='rgba(26,26,46,.35)'"
+             onmouseout="this.style.background='rgba(26,26,46,0)'">
+          <div style="width:40px; height:40px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s;"
+               onmouseover="this.style.opacity='1'; this.parentElement.style.background='rgba(26,26,46,.35)'"
+               onmouseout="this.style.opacity='0'; this.parentElement.style.background='rgba(26,26,46,0)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:var(--lg-red); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">DESIGN</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:13px; font-weight:700; color:var(--lg-dark); line-height:1.45; margin-bottom:4px;">작업물 제목을 입력하세요</div>
+        <div style="font-size:11px; color:var(--lg-gray);"></div>
+      </div>
+    </div>
+
+    <!-- 디자인 2 -->
+    <div onclick="openResource('design_02.jpg','image')"
+       style="background:var(--lg-white); border:1px solid var(--lg-silver); border-radius:14px; overflow:hidden; cursor:pointer; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden; background:#f0f0f0;">
+        <img src="design_02.jpg" alt="디자인 작업물 2"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute; inset:0; background:rgba(26,26,46,0); display:flex; align-items:center; justify-content:center; transition:background .2s;"
+             onmouseover="this.style.background='rgba(26,26,46,.35)'"
+             onmouseout="this.style.background='rgba(26,26,46,0)'">
+          <div style="width:40px; height:40px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s;"
+               onmouseover="this.style.opacity='1'; this.parentElement.style.background='rgba(26,26,46,.35)'"
+               onmouseout="this.style.opacity='0'; this.parentElement.style.background='rgba(26,26,46,0)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:var(--lg-red); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">DESIGN</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:13px; font-weight:700; color:var(--lg-dark); line-height:1.45; margin-bottom:4px;">작업물 제목을 입력하세요</div>
+        <div style="font-size:11px; color:var(--lg-gray);"></div>
+      </div>
+    </div>
+
+    <!-- 디자인 3 -->
+    <div onclick="openResource('design_03.jpg','image')"
+       style="background:var(--lg-white); border:1px solid var(--lg-silver); border-radius:14px; overflow:hidden; cursor:pointer; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden; background:#f0f0f0;">
+        <img src="design_03.jpg" alt="디자인 작업물 3"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute; inset:0; background:rgba(26,26,46,0); display:flex; align-items:center; justify-content:center; transition:background .2s;"
+             onmouseover="this.style.background='rgba(26,26,46,.35)'"
+             onmouseout="this.style.background='rgba(26,26,46,0)'">
+          <div style="width:40px; height:40px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s;"
+               onmouseover="this.style.opacity='1'; this.parentElement.style.background='rgba(26,26,46,.35)'"
+               onmouseout="this.style.opacity='0'; this.parentElement.style.background='rgba(26,26,46,0)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:var(--lg-red); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">DESIGN</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:13px; font-weight:700; color:var(--lg-dark); line-height:1.45; margin-bottom:4px;">작업물 제목을 입력하세요</div>
+        <div style="font-size:11px; color:var(--lg-gray);"></div>
+      </div>
+    </div>
+
+    <!-- 디자인 4 -->
+    <div onclick="openResource('design_04.jpg','image')"
+       style="background:var(--lg-white); border:1px solid var(--lg-silver); border-radius:14px; overflow:hidden; cursor:pointer; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden; background:#f0f0f0;">
+        <img src="design_04.jpg" alt="디자인 작업물 4"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute; inset:0; background:rgba(26,26,46,0); display:flex; align-items:center; justify-content:center; transition:background .2s;"
+             onmouseover="this.style.background='rgba(26,26,46,.35)'"
+             onmouseout="this.style.background='rgba(26,26,46,0)'">
+          <div style="width:40px; height:40px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s;"
+               onmouseover="this.style.opacity='1'; this.parentElement.style.background='rgba(26,26,46,.35)'"
+               onmouseout="this.style.opacity='0'; this.parentElement.style.background='rgba(26,26,46,0)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:var(--lg-red); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">DESIGN</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:13px; font-weight:700; color:var(--lg-dark); line-height:1.45; margin-bottom:4px;">작업물 제목을 입력하세요</div>
+        <div style="font-size:11px; color:var(--lg-gray);"></div>
+      </div>
+    </div>
+
+    <!-- 디자인 5 -->
+    <div onclick="openResource('design_05.jpg','image')"
+       style="background:var(--lg-white); border:1px solid var(--lg-silver); border-radius:14px; overflow:hidden; cursor:pointer; transition:transform .2s, box-shadow .2s;"
+       onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.12)'"
+       onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative; aspect-ratio:16/9; overflow:hidden; background:#f0f0f0;">
+        <img src="design_05.jpg" alt="디자인 작업물 5"
+             style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute; inset:0; background:rgba(26,26,46,0); display:flex; align-items:center; justify-content:center; transition:background .2s;"
+             onmouseover="this.style.background='rgba(26,26,46,.35)'"
+             onmouseout="this.style.background='rgba(26,26,46,0)'">
+          <div style="width:40px; height:40px; background:rgba(165,0,52,.85); border-radius:50%; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .2s;"
+               onmouseover="this.style.opacity='1'; this.parentElement.style.background='rgba(26,26,46,.35)'"
+               onmouseout="this.style.opacity='0'; this.parentElement.style.background='rgba(26,26,46,0)'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+        <span style="position:absolute; top:8px; left:8px; background:var(--lg-red); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:800; letter-spacing:1px; padding:3px 9px; border-radius:4px;">DESIGN</span>
+      </div>
+      <div style="padding:14px;">
+        <div style="font-size:13px; font-weight:700; color:var(--lg-dark); line-height:1.45; margin-bottom:4px;">작업물 제목을 입력하세요</div>
+        <div style="font-size:11px; color:var(--lg-gray);"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </div>
 
 <!-- ═══════════════════════════════════════
@@ -1173,20 +1432,6 @@
     <div class="section-title">2026 Action Plan</div>
     <div class="section-heading">'26년 주요 계획</div>
     <div class="card-grid">
-      <div class="card">
-        <div class="card-icon">🎯</div>
-        <h3>데이터 활용 기반 교육효과 분석 리포트 정례화</h3>
-        <p>교육 참여율, 만족도 등 데이터 기반으로 분석하여 <b>교육 효과를 객관적으로 측정 가능</b><br>
-        정기 리포트를 통해 교육 <b>과정 개선 및 신규 과정 기획에 필요한 의사결정 지원 강화</b><br>
-        교육 투자 대비 성과(ROI) 분석을 통해 <b>교육 운영의 효율성과 전략적 관리 수준 향상</b></p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🤖</div>
-        <h3>HTML·챗봇·AI 기반 정보 전달 및 사용자 경험(UX) 개선</h3>
-        <p>HTML 페이지와 챗봇·AI로 교육 정보를 제공하여 <b>교육의 접근성과 전달 속도를 개선</b><br>
-        반복 문의 사항을 자동화하여 <b>교육 담당자의 운영 업무 부담 감소 및 업무 효율성 증대</b><br>
-        사용자 중심 UX 개선으로 <b>교육 참여 편의성 및 교육 서비스 만족도 향상</b></p>
-      </div>
       <div class="card" style="position: relative;">
   <button
     onclick="openResource('checklist_Evidence.png', 'image')"
@@ -1206,6 +1451,21 @@
   과정별 체크리스트 활용으로 <b>교육 준비·운영 과정에서의 누락 및 오류 최소화</b><br>
   담당자 변경 시에도 동일한 기준으로 운영 가능하여 <b>교육 운영 안정성과 지속 가능성 강화</b></p>
 </div>
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>데이터 활용 기반 교육효과 분석 리포트 정례화</h3>
+        <p>교육 참여율, 만족도 등 데이터 기반으로 분석하여 <b>교육 효과를 객관적으로 측정 가능</b><br>
+        정기 리포트를 통해 교육 <b>과정 개선 및 신규 과정 기획에 필요한 의사결정 지원 강화</b><br>
+        교육 투자 대비 성과(ROI) 분석을 통해 <b>교육 운영의 효율성과 전략적 관리 수준 향상</b></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>HTML·챗봇·AI 기반 정보 전달 및 사용자 경험(UX) 개선</h3>
+        <p>HTML 페이지와 챗봇·AI로 교육 정보를 제공하여 <b>교육의 접근성과 전달 속도를 개선</b><br>
+        반복 문의 사항을 자동화하여 <b>교육 담당자의 운영 업무 부담 감소 및 업무 효율성 증대</b><br>
+        사용자 중심 UX 개선으로 <b>교육 참여 편의성 및 교육 서비스 만족도 향상</b></p>
+      </div>
+
     </div>
   </div>
 
@@ -1227,7 +1487,8 @@
         <tr><td>회의</td><td>69</td><td>4%</td><td>주 1.5시간 × 52주</td></tr>
         <tr><td>이동</td><td>78</td><td>4%</td><td>주 1.5시간 × 52주</td></tr>
         <tr><td>문의/응대</td><td>220</td><td>13%</td><td>1시간 × 220일</td></tr>
-        <tr><td>업무대기/일정중복</td><td>165</td><td>9%</td><td>45분 × 220일</td></tr>
+        <tr><td>커뮤니케이션(유관부서/담당자)</td><td>110</td><td>6%</td><td>30분 × 220일</td></tr>
+        <tr><td>품질 관리</td><td>55</td><td>3%</td><td>15분 × 220일</td></tr>
         <tr><td>업무전환대기</td><td>220</td><td>13%</td><td>1시간 × 220일</td></tr>
       </tbody>
       <tfoot>
@@ -1274,7 +1535,7 @@
           <div class="site-table-icon">🏭</div>
           <div class="site-table-meta">
             <div class="site-table-name">1. 평택</div>
-            <div class="site-table-sub">EX담당 · MS EXG팀 · 생산기술EXG팀 · 한국CC&amp;S역량개발팀</div>
+            <div class="site-table-sub">EX담당 · MS EXG팀 · 생산기술 EXG팀 · 한국CC&amp;S역량개발팀</div>
           </div>
           <div class="site-table-badge">4개 본부</div>
         </div>
@@ -1292,17 +1553,20 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="row-ref"><td rowspan="3">EX담당</td><td>기준공수</td><td>26.5</td><td>6.0</td><td>—</td><td>—</td><td class="val-total">15.0</td></tr>
-              <tr><td>총공수</td><td>3,800.8</td><td>1,107.1</td><td>—</td><td>—</td><td class="val-total">4,907.9</td></tr>
-              <tr class="row-cnt"><td>차수</td><td>132</td><td>168</td><td>—</td><td>—</td><td class="val-highlight">300</td></tr>
-              <tr class="row-ref"><td rowspan="3">MS EXG팀</td><td>기준공수</td><td>8.4</td><td>8.6</td><td>35.3</td><td>—</td><td class="val-total">10.0</td></tr>
-              <tr><td>총공수</td><td>167.7</td><td>1,271.3</td><td>400.0</td><td>—</td><td class="val-total">1,839.0</td></tr>
+              <tr class="row-ref"><td rowspan="3">EX담당</td><td>기준공수</td><td>27</td><td>3</td><td>—</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>3,024</td><td>251</td><td>—</td><td>—</td><td class="val-total">3,275</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>132</td><td>89</td><td>—</td><td>—</td><td class="val-highlight">221</td></tr>
+              <tr class="row-ref"><td rowspan="3">EX담당(현업)</td><td>기준공수</td><td>—</td><td>10</td><td>—</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>—</td><td>991</td><td>—</td><td>—</td><td class="val-total">991</td></tr>
+              <tr class="row-cnt"><td>차수</td><td>—</td><td>79</td><td>—</td><td>—</td><td class="val-highlight">79</td></tr>
+              <tr class="row-ref"><td rowspan="3">MS EXG팀</td><td>기준공수</td><td>8</td><td>9</td><td>35</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>168</td><td>1,443</td><td>400</td><td>—</td><td class="val-total">2,011</td></tr>
               <tr class="row-cnt"><td>차수</td><td>25</td><td>154</td><td>10</td><td>—</td><td class="val-highlight">189</td></tr>
-              <tr class="row-ref"><td rowspan="3">생산기술EXG팀</td><td>기준공수</td><td>17.2</td><td>10.8</td><td>29.0</td><td>—</td><td class="val-total">12.5</td></tr>
-              <tr><td>총공수</td><td>368.1</td><td>737.3</td><td>33.8</td><td>—</td><td class="val-total">1,139.1</td></tr>
+              <tr class="row-ref"><td rowspan="3">생산기술 EXG팀</td><td>기준공수</td><td>17</td><td>11</td><td>29</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>228</td><td>538</td><td>33</td><td>—</td><td class="val-total">799</td></tr>
               <tr class="row-cnt"><td>차수</td><td>20</td><td>67</td><td>1</td><td>—</td><td class="val-highlight">88</td></tr>
-              <tr class="row-ref"><td rowspan="3">한국CC&amp;S</td><td>기준공수</td><td>—</td><td>7.7</td><td>—</td><td>—</td><td class="val-total">8.2</td></tr>
-              <tr><td>총공수</td><td>—</td><td>4,407.2</td><td>—</td><td>—</td><td class="val-total">4,407.2</td></tr>
+              <tr class="row-ref"><td rowspan="3">한국CC&amp;S 역량개발팀</td><td>기준공수</td><td>—</td><td>8</td><td>—</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>—</td><td>3,883</td><td>—</td><td>—</td><td class="val-total">3,883</td></tr>
               <tr class="row-cnt"><td>차수</td><td>—</td><td>486</td><td>—</td><td>—</td><td class="val-highlight">486</td></tr>
             </tbody>
           </table>
@@ -1332,20 +1596,20 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="row-ref"><td rowspan="3">CTO EXG팀</td><td>기준공수</td><td>7.6</td><td>8.5</td><td>—</td><td>—</td><td class="val-total">8.3</td></tr>
-              <tr><td>총공수</td><td>225.3</td><td>1,091.3</td><td>—</td><td>—</td><td class="val-total">1,316.6</td></tr>
+              <tr class="row-ref"><td rowspan="3">CTO EXG팀</td><td>기준공수</td><td>8</td><td>9</td><td>—</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>225</td><td>1,238</td><td>—</td><td>—</td><td class="val-total">1,464</td></tr>
               <tr class="row-cnt"><td>차수</td><td>33</td><td>141</td><td>—</td><td>—</td><td class="val-highlight">174</td></tr>
-              <tr class="row-ref"><td rowspan="3">CTO SW역량강화팀</td><td>기준공수</td><td>40.1</td><td>12.7</td><td>—</td><td>—</td><td class="val-total">13.9</td></tr>
-              <tr><td>총공수</td><td>515.7</td><td>3,628.0</td><td>—</td><td>—</td><td class="val-total">4,143.6</td></tr>
+              <tr class="row-ref"><td rowspan="3">CTO SW역량강화팀</td><td>기준공수</td><td>40</td><td>13</td><td>—</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>516</td><td>2,478</td><td>—</td><td>—</td><td class="val-total">2,994</td></tr>
               <tr class="row-cnt"><td>차수</td><td>9</td><td>207</td><td>—</td><td>—</td><td class="val-highlight">216</td></tr>
-              <tr class="row-ref"><td rowspan="3">ES EXG팀</td><td>기준공수</td><td>4.2</td><td>3.6</td><td>—</td><td>15.7</td><td class="val-total">6.6</td></tr>
-              <tr><td>총공수</td><td>199.0</td><td>47.8</td><td>—</td><td>196.8</td><td class="val-total">443.6</td></tr>
+              <tr class="row-ref"><td rowspan="3">ES EXG팀</td><td>기준공수</td><td>4</td><td>4</td><td>—</td><td>16</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>169</td><td>48</td><td>—</td><td>196</td><td class="val-total">413</td></tr>
               <tr class="row-cnt"><td>차수</td><td>35</td><td>8</td><td>—</td><td>12</td><td class="val-highlight">55</td></tr>
-              <tr class="row-ref"><td rowspan="3">VS EXG팀</td><td>기준공수</td><td>6.2</td><td>2.8</td><td>17.5</td><td>16.5</td><td class="val-total">3.7</td></tr>
-              <tr><td>총공수</td><td>63.4</td><td>1,003.8</td><td>196.3</td><td>326.8</td><td class="val-total">1,590.3</td></tr>
+              <tr class="row-ref"><td rowspan="3">VS EXG팀</td><td>기준공수</td><td>6</td><td>3</td><td>18</td><td>17</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>63</td><td>1,204</td><td>376</td><td>327</td><td class="val-total">1,970</td></tr>
               <tr class="row-cnt"><td>차수</td><td>10</td><td>336</td><td>9</td><td>13</td><td class="val-highlight">368</td></tr>
-              <tr class="row-ref"><td rowspan="3">고객가치 EXG팀</td><td>기준공수</td><td>16.0</td><td>5.6</td><td>—</td><td>2.2</td><td class="val-total">8.8</td></tr>
-              <tr><td>총공수</td><td>467.1</td><td>389.8</td><td>—</td><td>3.3</td><td class="val-total">860.2</td></tr>
+              <tr class="row-ref"><td rowspan="3">고객가치 EXG팀</td><td>기준공수</td><td>16</td><td>6</td><td>—</td><td>2</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>567</td><td>420</td><td>—</td><td>3</td><td class="val-total">990</td></tr>
               <tr class="row-cnt"><td>차수</td><td>28</td><td>60</td><td>—</td><td>2</td><td class="val-highlight">90</td></tr>
             </tbody>
           </table>
@@ -1357,7 +1621,7 @@
           <div class="site-table-icon">🚉</div>
           <div class="site-table-meta">
             <div class="site-table-name">3. 서울역</div>
-            <div class="site-table-sub">한국영업본부 · 세일즈역량육성팀</div>
+            <div class="site-table-sub">한국영업 EXG팀 · 세일즈역량육성팀</div>
           </div>
           <div class="site-table-badge">2개 본부</div>
         </div>
@@ -1375,11 +1639,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr class="row-ref"><td rowspan="3">한국영업본부</td><td>기준공수</td><td>5.6</td><td>7.2</td><td>—</td><td>—</td><td class="val-total">6.9</td></tr>
-              <tr><td>총공수</td><td>168.5</td><td>585.1</td><td>—</td><td>—</td><td class="val-total">753.6</td></tr>
+              <tr class="row-ref"><td rowspan="3">한국영업 EXG팀</td><td>기준공수</td><td>6</td><td>7</td><td>—</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>229</td><td>785</td><td>—</td><td>—</td><td class="val-total">1,014</td></tr>
               <tr class="row-cnt"><td>차수</td><td>26</td><td>83</td><td>—</td><td>—</td><td class="val-highlight">109</td></tr>
-              <tr class="row-ref"><td rowspan="3">세일즈역량육성팀</td><td>기준공수</td><td>—</td><td>7.7</td><td>—</td><td>—</td><td class="val-total">7.7</td></tr>
-              <tr><td>총공수</td><td>—</td><td>1,149.1</td><td>—</td><td>—</td><td class="val-total">1,149.1</td></tr>
+              <tr class="row-ref"><td rowspan="3">세일즈역량육성팀</td><td>기준공수</td><td>—</td><td>8</td><td>—</td><td>—</td><td class="val-total"></td></tr>
+              <tr><td>총공수</td><td>—</td><td>1,735</td><td>—</td><td>—</td><td class="val-total">1,735</td></tr>
               <tr class="row-cnt"><td>차수</td><td>—</td><td>148</td><td>—</td><td>—</td><td class="val-highlight">148</td></tr>
             </tbody>
           </table>
@@ -1403,24 +1667,26 @@
             <tr>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 10px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">본부/<br>계획 차수</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">EX담당</th>
+              <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">EX담당(현업)</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">MS EXG팀</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">생산기술<br>EXG팀</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">한국CC&amp;S<br>역량개발팀</th>
-              <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">CTO EXG<br>팀</th>
+              <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">CTO EXG팀</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">CTO SW<br>역량강화팀</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">VS EXG팀</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">ES EXG팀</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">고객가치<br>EXG팀</th>
-              <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">한국영업본<br>부 EXG팀</th>
+              <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">한국영업<br>EXG팀</th>
               <th style="background:var(--lg-dark); color:#fff; padding:11px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.1);">세일즈<br>역량육성팀</th>
               <th style="background:var(--lg-red); color:#fff; padding:11px 8px; text-align:center; font-weight:700;">합계</th>
             </tr>
             <tr>
               <th style="background:#2d2d4a; color:rgba(255,255,255,.85); padding:9px 10px; text-align:center; font-size: 13.5px; border-right:1px solid rgba(255,255,255,.08);">'26년<br>계획차수</th>
-              <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">304</td>
+              <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">221</td>
+              <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">79</td>
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">189</td>
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">88</td>
-              <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">243</td>
+              <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">486</td>
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">174</td>
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">216</td>
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">368</td>
@@ -1428,7 +1694,7 @@
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">90</td>
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">109</td>
               <td style="background:#2d2d4a; color:#fff; padding:9px 8px; text-align:center; font-weight:600; border-right:1px solid rgba(255,255,255,.08);">148</td>
-              <td style="background:#7a0025; color:#fff; padding:9px 8px; text-align:center; font-weight:700;">1,984</td>
+              <td style="background:#7a0025; color:#fff; padding:9px 8px; text-align:center; font-weight:700;">2,223</td>
             </tr>
           </thead>
           <tbody>
@@ -1436,22 +1702,24 @@
             <tr>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 10px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">본부/<br>카테고리</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">EX담당</td>
+              <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">EX담당(현업)</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">MS EXG팀</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">생산기술<br>EXG팀</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">한국CC&amp;S<br>역량개발팀</td>
-              <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">CTO EXG<br>팀</td>
+              <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">CTO EXG팀</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">CTO SW<br>역량강화팀</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">VS EXG팀</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">ES EXG팀</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">고객가치<br>EXG팀</td>
-              <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">한국영업본<br>부 EXG팀</td>
+              <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">한국영업<br>EXG팀</td>
               <td style="background:#f0f0f5; font-weight:700; color:var(--lg-dark); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8; border-right:1px solid #e8e8e8;">세일즈<br>역량육성팀</td>
               <td style="background:#ffe0e8; font-weight:700; color:var(--lg-red); padding:9px 8px; text-align:center; border-bottom:1px solid #e0e0e8;">공수합계</td>
             </tr>
             <!-- 운영 공수 합계 -->
             <tr style="background:#fff8fa;">
               <td style="padding:9px 10px; text-align:center; font-weight:700; color:var(--lg-dark); background:#fdf0f3; border-bottom:1px solid #f0e0e4; border-right:1px solid #f0e0e4;">운영 공수<br>합계</td>
-              <td style="padding:9px 8px; text-align:center; font-weight:700; color:var(--lg-red); border-bottom:1px solid #f0e0e4; border-right:1px solid #f0e0e4;">4,266</td>
+              <td style="padding:9px 8px; text-align:center; font-weight:700; color:var(--lg-red); border-bottom:1px solid #f0e0e4; border-right:1px solid #f0e0e4;">3,275</td>
+              <td style="padding:9px 8px; text-align:center; font-weight:700; color:var(--lg-red); border-bottom:1px solid #f0e0e4; border-right:1px solid #f0e0e4;">991</td>
               <td style="padding:9px 8px; text-align:center; font-weight:700; color:var(--lg-red); border-bottom:1px solid #f0e0e4; border-right:1px solid #f0e0e4;">2,011</td>
               <td style="padding:9px 8px; text-align:center; font-weight:700; color:var(--lg-red); border-bottom:1px solid #f0e0e4; border-right:1px solid #f0e0e4;">799</td>
               <td style="padding:9px 8px; text-align:center; font-weight:700; color:var(--lg-red); border-bottom:1px solid #f0e0e4; border-right:1px solid #f0e0e4;">3,883</td>
@@ -1467,7 +1735,8 @@
             <!-- 운영 FTE -->
             <tr>
               <td style="padding:9px 10px; text-align:center; font-weight:600; color:var(--lg-dark); background:#fafbfc; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">운영FTE</td>
-              <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">4.3</td>
+              <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">3.3</td>
+              <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">1</td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">2</td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">0.8</td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">3.9</td>
@@ -1487,6 +1756,7 @@
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;"></td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;"></td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;"></td>
+              <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;"></td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">0.5</td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">1</td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;"></td>
@@ -1500,6 +1770,7 @@
             <tr>
               <td style="padding:9px 10px; text-align:center; font-weight:600; color:var(--lg-dark); background:#fafbfc; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">영상</td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">2</td>
+              <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;"></td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;"></td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">0.5</td>
               <td style="padding:9px 8px; text-align:center; border-bottom:1px solid #f0f0f4; border-right:1px solid #ebebeb;">2</td>
@@ -1516,8 +1787,14 @@
             <tr style="background:#fff0f3;">
               <td style="padding:10px 10px; text-align:center; font-weight:700; color:var(--lg-red); background:#fde8ee; border-right:1px solid #f0d0d8;">총인원</td>
               <td style="padding:10px 8px; text-align:center; font-weight:700; color:var(--lg-dark); border-right:1px solid #f0d0d8;">
-                9.3<span style="font-size: 10.5px; color:var(--lg-red); margin-left:2px;">(0.4▲)</span>
+                8.3<span style="font-size: 10.5px; color:var(--lg-red); margin-left:2px;">(0.3▲)</span>
               </td>
+
+                <td style="padding:10px 8px; text-align:center; font-weight:700; color:var(--lg-dark); border-right:1px solid #f0d0d8;">
+                1<span style="font-size: 10.5px; color:#3a7ad5; margin-left:2px;">(0.4▼)</span>
+              </td>
+
+
               <td style="padding:10px 8px; text-align:center; font-weight:700; color:var(--lg-dark); border-right:1px solid #f0d0d8;">
                 2.0<span style="font-size: 10.5px; color:#3a7ad5; margin-left:2px;">(1.2▼)</span>
               </td>
@@ -1576,7 +1853,7 @@
           <tr>
             <th>효과 항목</th>
             <th>M/M방식 (기존)</th>
-            <th>Polling방식 (개선)</th>
+            <th>Poolling방식 (개선)</th>
             <th>LG전자 실익 (Value)</th>
           </tr>
         </thead>
@@ -1637,7 +1914,6 @@
     <div style="background:var(--lg-light); border-radius:10px; padding:16px 20px; font-size: 13.5px; color:#666; line-height:1.9;">
       <div>※ 평택/마곡/서울역 지역으로 구분하여 총괄이 업무 관리</div>
       <div>※ 18PT 시점까지는 기존 영상 담당자 운영</div>
-      <div>※ 사원/선임에 대한 역량활동 실시하여 운영 품질 유지</div>
       <div>※ 영상 제작 특성을 고려하여 시간 기준이 아닌, 난이도별 등가 환산 단위인 PT산정 방식을 적용</div>
     </div>
   </div>
@@ -2147,12 +2423,10 @@
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [미디어플레이트]<br>
-              <a href="https://mediaplate.co.kr/" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(S급 1,200만~1,500만)</span>
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [JLFilms]<br>
-              <a href="https://kmong.com/gig/416596" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(프리미엄 500만~900만)</span>
             </td>
             <td style="padding:24px 18px; border-right:none; vertical-align:middle; line-height:1.8;">
@@ -2173,12 +2447,10 @@
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [더나은인재들]<br>
-              <a href="http://www.betterpeople.kr/main" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(A급 280만~700만)</span>
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [가드미디어]<br>
-              <a href="https://kmong.com/gig/662520" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(60초 분량 140만)<br>(비즈니스 300만~550만)</span>
             </td>
             <td style="padding:24px 18px; border-right:none; vertical-align:middle; line-height:1.8;">
@@ -2199,12 +2471,10 @@
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [더나은인재들]<br>
-              <a href="http://www.betterpeople.kr/main" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(B급 150만~700만)</span>
             </td>
             <td style="text-align:center; padding:24px 14px; border-right:1px solid #eee; vertical-align:middle; line-height:1.8;">
               [조컴퍼니]<br>
-              <a href="https://kmong.com/gig/592186" target="_blank" style="color:var(--lg-red); font-weight:700; text-decoration:underline;">사이트 이동</a><br>
               <span style="font-size:12px; color:var(--lg-gray);">(촬영X 50만~100만)<br>(촬영 포함 120만~170만)</span>
             </td>
             <td style="padding:24px 18px; border-right:none; vertical-align:middle; line-height:1.8;">
@@ -2265,8 +2535,8 @@
       </div>
       <div class="cost-card accent">
         <div class="c-label">'26년 총액</div>
-        <div class="c-value">2,531,901천원</div>
-        <div class="c-change">▼ 83,304 천원 감소</div>
+        <div class="c-value">2,533,749천원</div>
+        <div class="c-change">▼ 81,456 천원 감소(-3.1%)</div>
       </div>
       <div class="cost-card">
         <div class="c-label">인상률 제안</div>
@@ -2358,8 +2628,8 @@
           <!-- 영상제작 사원 -->
           <tr>
             <td>사원</td><td>10</td><td>12</td><td>5,484</td><td>625,176</td>
-            <td rowspan="1" style="vertical-align:middle; text-align:center; font-size:12px; color:#555; line-height:1.5; background:#fff8f8;">
-              '25년 사원/선임<br>단가 통합
+            <td rowspan="1" style="vertical-align:middle; text-align:left; font-size:12px; color:#555; line-height:1.5; background:#fff8f8;">
+              '25년 사원/선임 단가 통합
             </td>
           </tr>
           <!-- ① 소계 -->
@@ -2374,6 +2644,8 @@
             <td class="td-total"></td>
             <td class="td-total"></td>
             <td class="td-total" style="font-weight:700; color:var(--lg-dark);">2,497,506</td>
+            <td rowspan="1" style="vertical-align:middle; text-align:left; font-size:12px; color:#555; line-height:1.5; background:#fff8f8;">
+              '25년 대비<br>64,337천원 감소 (-2.5%)
           </tr>
           <!-- 기타정산금 -->
           <tr>
@@ -2392,8 +2664,8 @@
           <tr>
             <td class="td-sub" colspan="2">서울 중식대</td>
             <td></td><td></td><td></td><td style="text-align:center;">42,900</td>
-            <td colspan="4"></td><td style="text-align:center;">31,416</td>
-            <td style="font-size: 13.5px; color:#777; text-align:left; padding-left:6px;">*서울지역 17명 대상 (7,700원)</td>
+            <td colspan="4"></td><td style="text-align:center;">33,264</td>
+            <td style="font-size: 13.5px; color:#777; text-align:left; padding-left:6px;">*서울지역 18명 대상 (7,700원)</td>
           </tr>
           <tr>
             <td class="td-sub" colspan="2">인건비소급</td>
@@ -2407,7 +2679,7 @@
             <td class="td-total"></td><td class="td-total"></td><td class="td-total"></td>
             <td class="td-total" style="font-weight:700;">53,361</td>
             <td class="td-total"></td><td class="td-total"></td><td class="td-total"></td><td class="td-total"></td>
-            <td class="td-total" style="font-weight:700;">34,395</td>
+            <td class="td-total" style="font-weight:700;">36,243</td>
 
             <td class="td-total"></td>
           </tr>
@@ -2422,7 +2694,7 @@
             <td class="td-grand" style="font-weight:900;">36.5</td>
             <td class="td-grand"></td>
             <td class="td-grand"></td>
-            <td class="td-grand" style="font-weight:900;">2,531,901</td>
+            <td class="td-grand" style="font-weight:900;">2,533,749</td>
             <td class="td-grand"></td>
           </tr>
         </tbody>
@@ -2485,8 +2757,8 @@
             <td>2</td><td>141,048</td>
             <td>3</td><td>198,144</td>
             <td>9.3</td><td>26.20%</td><td>28,879.8</td>
-            <td>710</td><td>1,585</td><td></td>
-            <td style="font-weight:700; color:var(--lg-dark);">654,380</td>
+            <td>710</td><td>1,585</td><td>1,848</td>
+            <td style="font-weight:700; color:var(--lg-dark);">656,228</td>
           </tr>
           <tr>
             <td class="td-dept">MS EXG팀</td>
@@ -2594,10 +2866,14 @@
             <td class="td-total-row" style="font-weight:700;">1,394</td>
             <td class="td-total-row" style="font-weight:700;">1,585</td>
             <td class="td-total-row" style="font-weight:700;">31,416</td>
-            <td style="background:var(--lg-red); color:#fff; font-weight:700; font-size: 13.5px;">2,531,901</td>
+            <td style="background:var(--lg-red); color:#fff; font-weight:700; font-size: 13.5px;">2,533,749</td>
           </tr>
         </tbody>
       </table>
+    </div>
+    <div style="background:rgba(165,0,52,.06); border-left:3px solid var(--lg-red); border-radius:0 8px 8px 0; padding:10px 16px; font-size: 13.5px; color:#555; margin-bottom:32px;">
+      ※ EX담당 행정 : 학위파견, 컨소시엄, 주재원 행정, 전사필수, 어학, 유데미 관리(인원: 3명)<br>
+※ CTO SW 행정 : CTO SW 국내/해외 예산관리 및 비용처리(인원: 1명)
     </div>
   </div>
 </div>
@@ -2615,6 +2891,11 @@
   <div class="section">
     <div class="section-title">Organization</div>
     <div class="section-heading">조직도</div>
+  
+    <div class="pt-section">
+      <div class="pt-section-desc">
+        쉐어드서비스 확대를 통해 사이트별 통합 운영 체계를 정립하고, 현장대리인 중심의 단일 소통 구조를 기반으로 현장 수요에 대응하는 유연한 인력 운영과 운영 효율성 제고를 추진합니다.
+      <br><br><br><br></div>
 
     <style>
       .pyr-wrap { display:flex; flex-direction:column; align-items:center; gap:0; width:100%; }
@@ -2661,7 +2942,7 @@
       <div class="pyr-hbar"></div>
       <div class="pyr-row pyr-l3" style="gap:14px; align-items:stretch;">
         <div class="pyr-group">
-          <div class="pg-header"><span class="pg-icon">🏭</span>평택 교육운영자 <span style="margin-left:auto; font-size: 13.5px; color:#999; font-weight:400;">10명</span></div>
+          <div class="pg-header"><span class="pg-icon">🏭</span>평택 교육운영자 <span style="margin-left:auto; font-size: 13.5px; color:#999; font-weight:400;">12명</span></div>
           <div class="pg-members">
             <span class="pm-pill senior"><span class="pm-rank">선임</span>최부경</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>정보연</span>
@@ -2673,16 +2954,19 @@
             <span class="pm-pill staff"><span class="pm-rank">사원</span>이헌정</span>
             <span class="pm-pill staff"><span class="pm-rank">사원</span>조은선</span>
             <span class="pm-pill staff"><span class="pm-rank">사원</span>허린</span>
+            <span class="pm-pill staff"><span class="pm-rank">사원</span>황예림</span>
+            <span class="pm-pill staff"><span class="pm-rank">아르바이트</span>채용예정</span>
           </div>
         </div>
         <div class="pyr-group">
-          <div class="pg-header"><span class="pg-icon">🏢</span>마곡 교육운영자 <span style="margin-left:auto; font-size: 13.5px; color:#999; font-weight:400;">8명</span></div>
+          <div class="pg-header"><span class="pg-icon">🏢</span>마곡 교육운영자 <span style="margin-left:auto; font-size: 13.5px; color:#999; font-weight:400;">9명</span></div>
           <div class="pg-members">
             <span class="pm-pill senior"><span class="pm-rank">선임</span>김미진</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>선송이</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>안현아</span>
             <span class="pm-pill senior"><span class="pm-rank">선임</span>전수현</span>
             <span class="pm-pill staff"><span class="pm-rank">사원</span>김채현</span>
+            <span class="pm-pill staff"><span class="pm-rank">사원</span>이지희</span>
             <span class="pm-pill staff"><span class="pm-rank">사원</span>장소진</span>
             <span class="pm-pill staff"><span class="pm-rank">사원</span>정하연</span>
             <span class="pm-pill staff"><span class="pm-rank">사원</span>한지영</span>
@@ -2717,6 +3001,9 @@
   <div class="section section-alt">
     <div class="section-title">Competency</div>
     <div class="section-heading">교육서비스센터 조직 역량 지표</div>
+    <div class="pt-section">
+      <div class="pt-section-desc">
+        본 역량지표는 당사 내부 역량평가 기준에 따라 수행된 평가 결과를 토대로 산출된 평균 지표 입니다. </div>
     <div class="radar-container">
       <div class="radar-chart-area">
         <canvas id="radarChart"></canvas>
@@ -2734,8 +3021,8 @@
         <div class="rt-sub">요구 대응, 추가 니즈 발굴</div>
       </div>
     </div>
-  </div>
-
+    </div>
+    </div>
     </div>
 </div>
 
@@ -2746,9 +3033,7 @@
   <div class="hero">
     <div class="hero-label">Appendix</div>
     <h1>LG 계열사별 교육운영 인력 산정 기준</h1>
-    <p>인력 산정은 교육 규모와 행정업무 복잡도를 기준으로, 계열사별 운영 특성에 맞게 산정합니다.
-
-</p>
+    <p>인력 산정은 교육 규모와 행정업무 복잡도를 기준으로, 계열사별 운영 특성에 맞게 산정합니다.</p>
   </div>
 
   <div class="section section-alt">
@@ -2776,11 +3061,11 @@
         <tr>
           <td style="text-align:center; font-weight:700; color:var(--lg-dark);">LG 전자</td>
           <td style="text-align:center;">약 36,500명</td>
-          <td style="text-align:center; font-weight:600;">2,500</td>
+          <td style="text-align:center; font-weight:600;">2,200</td>
           <td style="text-align:center;"><span class="badge badge-red">22명</span></td>
           <td style="text-align:center;"><span class="badge badge-red">4명</span></td>
           <td style="text-align:center;"><span class="badge badge-red">9명</span></td>
-          <td style="text-align:center; font-weight:600; color:var(--lg-red);">114차수/인</td>
+          <td style="text-align:center; font-weight:600; color:var(--lg-red);">100차수/인</td>
           <td style="text-align:left;">다수 사업부, 대규모 집합교육, 복수 거점 운영</td>
           <td style="text-align:center;"><span class="badge badge-gray">차수 기반</span></td>
         </tr>
@@ -2829,7 +3114,7 @@
           <td style="text-align:center;"><span class="badge badge-gray">차수+행정</span></td>
         </tr>
         <tr>
-          <td style="text-align:center; font-weight:700; color:var(--lg-dark); text-decoration:underline;">LX 판토스</td>
+          <td style="text-align:center; font-weight:700; color:var(--lg-dark);">LX 판토스</td>
           <td style="text-align:center;">약 1,900명</td>
           <td style="text-align:center; font-weight:600;">75</td>
           <td style="text-align:center;"><span class="badge badge-red">1명</span></td>
@@ -2921,7 +3206,7 @@ window.addEventListener('load', function() {
     window.addEventListener('resize', syncHeight);
     new Chart(ctx.getContext('2d'), {
       data: {
-        labels: ['EX담당','MS EXG팀','생산기술 EXG팀','한국CC&S 역량개발팀','CTO EXG팀','SW역량강화팀','VS EXG팀','ES EXG팀','고객가치혁신','한국영업 EXG팀','세일즈역량육성팀'],
+        labels: ['EX담당','MS EXG팀','생산기술 EXG팀','한국CC&S 역량개발팀','CTO EXG팀','SW역량강화팀','VS EXG팀','ES EXG팀','고객가치혁신 EXG팀','한국영업 EXG팀','세일즈역량육성팀'],
         datasets: [
           { type: 'bar', label: '오프라인', data: [199,255,69,416,74,72,140,15,136,94,169], backgroundColor: '#5B9BD5', datalabels: { anchor:'center', align:'center', color:'#000', font:{weight:'bold', size:10} } },
           { type: 'bar', label: '오프라인 외', data: [220,129,69,2,21,179,72,29,6,23,10], backgroundColor: '#ED7D31', datalabels: { anchor:'center', align:'center', color:'#000', font:{weight:'bold', size:10} } },
@@ -3002,7 +3287,7 @@ window.addEventListener('load', function() {
       [{ text:'A등급 (581건)', sub:'짧은 시간 / 높은 복잡도', x:chart.chartArea.left+8, y:chart.chartArea.top+18 },
        { text:'S등급 (142건)', sub:'긴 시간 / 높은 복잡도',   x:x0+8, y:chart.chartArea.top+18 },
        { text:'C등급 (710건)', sub:'짧은 시간 / 낮은 복잡도', x:chart.chartArea.left+8, y:y0+18 },
-       { text:'B등급 (1,030건)', sub:'긴 시간 / 낮은 복잡도', x:x0+8, y:y0+18 }
+       
       ].forEach(function(l) {
         ctx2.fillStyle='#A50034'; ctx2.font='bold 10px sans-serif'; ctx2.textAlign='left'; ctx2.fillText(l.text,l.x,l.y);
         ctx2.fillStyle='#888'; ctx2.font='9px sans-serif'; ctx2.fillText(l.sub,l.x,l.y+13);
@@ -3019,11 +3304,11 @@ window.addEventListener('load', function() {
   /* ── RADAR CHART ── */
   const rctx = document.getElementById('radarChart');
   if (rctx) {
-    const scores = [4.7, 4.0, 4.0, 4.0, 3.5];
+    const scores = [4.5, 4.0, 4.0, 4.0, 3.5];
     new Chart(rctx.getContext('2d'), {
       type: 'radar',
       data: {
-        labels: ['운영 실행력 (4.7)','커뮤니케이션 (4.0)','문제 해결 (4.0)','행정 관리 (4.0)','콘텐츠 제작 (3.5)'],
+        labels: ['운영 실행력 (4.5)','커뮤니케이션 (4.0)','문제 해결 (4.0)','행정 관리 (4.0)','콘텐츠 제작 (3.5)'],
         datasets: [{ data: scores, fill: true, backgroundColor: 'rgba(165,0,52,0.15)', borderColor: '#A50034', pointBackgroundColor: '#A50034', borderWidth: 2 }]
       },
       options: { scales: { r: { min:0, max:5, ticks:{display:false}, pointLabels:{font:{size:13}} } }, plugins: { legend:{display:false}, datalabels:{display:false} } }
